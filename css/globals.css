@@ -1,0 +1,38 @@
+:root {
+  /* Typography */
+  --font-family: "Manrope", sans-serif;
+
+  /* Colors */
+  --color-primary: #20201f;
+  --color-secondary: #6a8f70;
+  --color-text-muted: #74736f;
+  --color-background: #f7f4ee;
+  --color-surface: #f7f3ec;
+  --color-surface-alt: #eee9df;
+  --color-surface-soft: #dfe4d9;
+  --color-border: rgba(32, 32, 31, 0.12);
+  --color-on-dark: #fffdfa;
+
+  /* Radius scale */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-pill: 999px;
+
+  /* Effects */
+  --shadow-lg: 0 24px 80px rgba(44, 41, 34, 0.13);
+
+  /* Backward-compatible aliases */
+  --ink: var(--color-primary);
+  --muted: var(--color-text-muted);
+  --paper: var(--color-background);
+  --paper-2: var(--color-surface-alt);
+  --white: var(--color-surface);
+  --line: var(--color-border);
+  --accent: var(--color-secondary);
+  --soft: var(--color-surface-soft);
+  --radius: var(--radius-xl);
+  --shadow: var(--shadow-lg);
+}

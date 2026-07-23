@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/globals.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -210,6 +211,18 @@
           </div>
         </div>
       </section>
+      <section class="visual-story visual-story-lake">
+        <div class="wrap">
+          <div class="visual-story-copy reveal">
+            <p class="eyebrow">Make room for stillness</p>
+            <h2>You do not have to solve everything today.</h2>
+            <p>
+              A few honest minutes can be enough to hear what your mind has been
+              trying to say.
+            </p>
+          </div>
+        </div>
+      </section>
       <section>
         <div class="wrap">
           <div class="section-head reveal">
@@ -221,28 +234,28 @@
           </div>
           <div class="features-grid">
             <article class="feature reveal">
-              <span>◌</span>
+              <span class="feature-icon feature-icon-reflections" aria-hidden="true"></span>
               <div>
                 <h3>Guided reflections</h3>
                 <p>Go deeper without facing an intimidating blank page.</p>
               </div>
             </article>
             <article class="feature reveal">
-              <span>⌁</span>
+              <span class="feature-icon feature-icon-voice" aria-hidden="true"></span>
               <div>
                 <h3>Voice journaling</h3>
                 <p>Speak naturally when writing does not feel right.</p>
               </div>
             </article>
             <article class="feature reveal">
-              <span>↗</span>
+              <span class="feature-icon feature-icon-insights" aria-hidden="true"></span>
               <div>
                 <h3>Personal insights</h3>
                 <p>See recurring emotions, themes, and meaningful changes.</p>
               </div>
             </article>
             <article class="feature reveal">
-              <span>◴</span>
+              <span class="feature-icon feature-icon-reminders" aria-hidden="true"></span>
               <div>
                 <h3>Gentle reminders</h3>
                 <p>
@@ -251,7 +264,7 @@
               </div>
             </article>
             <article class="feature reveal">
-              <span>□</span>
+              <span class="feature-icon feature-icon-journal" aria-hidden="true"></span>
               <div>
                 <h3>Journal history</h3>
                 <p>
@@ -260,7 +273,7 @@
               </div>
             </article>
             <article class="feature reveal">
-              <span>◎</span>
+              <span class="feature-icon feature-icon-library" aria-hidden="true"></span>
               <div>
                 <h3>Curated library</h3>
                 <p>Keep books, podcasts, and thoughtful resources nearby.</p>
@@ -321,6 +334,18 @@
           </blockquote>
         </div>
       </section>
+      <section class="visual-story visual-story-forest">
+        <div class="wrap">
+          <div class="visual-story-copy reveal">
+            <p class="eyebrow">Return to yourself</p>
+            <h2>Clarity grows when you give it somewhere to land.</h2>
+            <p>
+              Yutova helps you slow down, notice what matters, and carry one
+              useful insight into your next day.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="pricing-section">
         <div class="wrap">
           <div class="pricing-section-head reveal">
@@ -329,6 +354,24 @@
             <p>
               No trial tricks, no forced sign-up before you've written a word.
             </p>
+            <div class="pricing-toggle" role="group" aria-label="Billing period">
+              <button
+                class="pricing-toggle-option is-active"
+                type="button"
+                data-billing="monthly"
+                aria-pressed="true"
+              >
+                Monthly
+              </button>
+              <button
+                class="pricing-toggle-option"
+                type="button"
+                data-billing="yearly"
+                aria-pressed="false"
+              >
+                Yearly <span>Save 29%</span>
+              </button>
+            </div>
           </div>
           <div class="pricing-grid">
             <article class="pricing-card reveal">
@@ -346,11 +389,22 @@
               <a class="btn light" href="#download">Start free</a>
             </article>
             <article class="pricing-card pricing-card-featured reveal">
-              <span class="pricing-badge">Most chosen</span>
               <h3>Yutova+</h3>
-              <div class="pricing-amount">$6.99<span>/month</span></div>
+              <div class="pricing-amount">
+                <span
+                  class="pricing-price"
+                  data-monthly="$6.99"
+                  data-yearly="$59.99"
+                  >$6.99</span
+                ><span class="pricing-period">/month</span>
+              </div>
               <p class="pricing-description">
-                For the longer conversation with yourself.
+                <span
+                  class="pricing-description-text"
+                  data-monthly="For the longer conversation with yourself."
+                  data-yearly="Billed yearly — save 29%."
+                  >For the longer conversation with yourself.</span
+                >
               </p>
               <ul>
                 <li>Full journal history &amp; memory threads</li>
@@ -408,7 +462,7 @@
     </main>
     <footer>
       <div class="wrap footer-grid">
-        <div><strong>yutova.</strong> © 2026</div>
+        <div>© 2026 Yutova. All rights reserved.</div>
         <div class="footer-links">
           <a href="privacy-policy/">Privacy</a><a href="terms-of-use/">Terms</a
           ><a href="mailto:hello@yutova.app">Contact</a>
@@ -441,6 +495,27 @@
         }),
       );
       image.style.transition = ".25s ease";
+      const pricingToggleOptions = document.querySelectorAll(
+        ".pricing-toggle-option",
+      );
+      const pricingPrice = document.querySelector(".pricing-price");
+      const pricingPeriod = document.querySelector(".pricing-period");
+      const pricingDescription = document.querySelector(
+        ".pricing-description-text",
+      );
+      pricingToggleOptions.forEach((option) =>
+        option.addEventListener("click", () => {
+          const billing = option.dataset.billing;
+          pricingToggleOptions.forEach((toggleOption) => {
+            const isActive = toggleOption === option;
+            toggleOption.classList.toggle("is-active", isActive);
+            toggleOption.setAttribute("aria-pressed", String(isActive));
+          });
+          pricingPrice.textContent = pricingPrice.dataset[billing];
+          pricingPeriod.textContent = billing === "yearly" ? "/year" : "/month";
+          pricingDescription.textContent = pricingDescription.dataset[billing];
+        }),
+      );
       const reflections = [
         {
           entry:
