@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yutova's Terms of Use." />
+    <title>Terms of Use — Yutova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Manrope:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/legal.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="../" aria-label="Yutova home">
+        <img class="brand-logo" src="../assets/logo.svg" alt="" /><span
+          class="brand-name"
+          >Yutova</span
+        >
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../#how">How it works</a><a href="../#features">Features</a
+        ><a href="../#library">Library</a><a href="../#privacy">Privacy</a>
+      </div>
+      <a class="btn" href="../#download">Download app</a
+      ><button class="menu" id="menu" aria-label="Open menu">☰</button>
+    </nav>
+    <main>
+      <article class="legal-wrap legal-card">
+        <p class="eyebrow">Using Yutova</p>
+        <h1>Terms of Use</h1>
+        <p class="updated">Last updated: July 23, 2026</p>
+
+        <p>
+          These Terms of Use govern your access to and use of Yutova. By using
+          Yutova, you agree to these terms.
+        </p>
+
+        <h2>Yutova is a reflection tool</h2>
+        <p>
+          Yutova offers journaling and reflective experiences for personal use.
+          It is not medical, mental-health, legal, financial, or other
+          professional advice. It is not a substitute for professional care,
+          diagnosis, or treatment.
+        </p>
+
+        <h2>Eligibility and accounts</h2>
+        <p>
+          You must provide accurate information when creating an account and keep
+          your account credentials secure. You are responsible for activity that
+          occurs through your account.
+        </p>
+
+        <h2>Acceptable use</h2>
+        <p>You agree not to misuse Yutova, including by:</p>
+        <ul>
+          <li>breaking applicable laws or infringing the rights of others;</li>
+          <li>interfering with the service or attempting unauthorized access;</li>
+          <li>using the service to distribute harmful software or content; or</li>
+          <li>reverse engineering the service except where the law permits it.</li>
+        </ul>
+
+        <h2>Your content</h2>
+        <p>
+          You retain ownership of the content you submit to Yutova. You grant us
+          a limited permission to host and process it solely to provide, secure,
+          and improve the service for you.
+        </p>
+
+        <h2>Availability and changes</h2>
+        <p>
+          We may modify, suspend, or discontinue parts of Yutova as the service
+          evolves. We will make reasonable efforts to communicate material
+          changes when appropriate.
+        </p>
+
+        <h2>Disclaimers and liability</h2>
+        <p>
+          Yutova is provided on an “as is” and “as available” basis to the
+          extent permitted by law. We do not guarantee that the service will
+          always be uninterrupted, secure, or error-free. To the maximum extent
+          permitted by law, Yutova is not liable for indirect, incidental,
+          special, consequential, or punitive damages.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about these terms can be sent to
+          <a href="mailto:hello@yutova.app">hello@yutova.app</a>.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div><strong>yutova.</strong> © 2026</div>
+        <div class="footer-links">
+          <a href="../privacy-policy/">Privacy</a
+          ><a href="../terms-of-use/">Terms</a
+          ><a href="mailto:hello@yutova.app">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menu = document.getElementById("menu");
+      const navLinks = document.getElementById("navLinks");
+      menu.addEventListener("click", () => navLinks.classList.toggle("open"));
+      navLinks
+        .querySelectorAll("a")
+        .forEach((link) =>
+          link.addEventListener("click", () => navLinks.classList.remove("open")),
+        );
+    </script>
+  </body>
+</html>

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -38,16 +38,17 @@
             <div class="eyebrow">A more thoughtful daily practice</div>
             <h1>Talk honestly. Understand yourself.</h1>
             <p>
-              Share what is on your mind and receive gentle reflections that
-              help you notice patterns, process emotions, and move forward with
-              more clarity.
+              Share what's on your mind and receive gentle reflections that help
+              you notice patterns, process emotions, and move forward with more
+              clarity.
             </p>
             <div class="hero-actions">
               <a class="btn" href="#download">Download for iOS</a
               ><a class="btn light" href="#how">See how it works</a>
             </div>
             <div class="hero-note">
-              A self-reflection tool—not a replacement for professional care.
+              Private by design — reflections are generated on your entry, never
+              used to train models.
             </div>
           </div>
           <div class="phone-stage reveal">
@@ -69,27 +70,32 @@
           <div class="trust-item">Reflections shaped around you</div>
         </div>
       </div>
-      <section class="story">
-        <div class="wrap story-grid">
-          <div class="story-copy reveal">
-            <div class="eyebrow">A gentler way to reflect</div>
-            <h2>
-              Sometimes you do not need an answer. You need space to think.
-            </h2>
-            <p>
-              Yutova helps you slow down and hear yourself more clearly. A few
-              honest words can become a thoughtful conversation, a useful
-              perspective, or simply a calmer moment.
-            </p>
+      <section class="reflection-demo" id="how">
+        <div class="wrap">
+          <div class="reflection-demo-heading reveal">
+            <span class="reflection-demo-tag">See a reflection happen</span>
+            <h2>Type a few honest words. Watch what comes back.</h2>
+            <p>No script, no template — just space to think out loud.</p>
           </div>
-          <div class="screen-card reveal">
-            <div class="phone">
-              <img src="assets/reflection.png" alt="Yutova reflection screen" />
+          <div class="reflection-demo-phone reveal">
+            <div class="reflection-demo-notch"></div>
+            <div class="reflection-demo-date">Today, 9:41 PM</div>
+            <div class="reflection-demo-entry">
+              <span id="typedText"></span><span class="type-cursor"></span>
+            </div>
+            <div class="reflection-demo-response" id="reflectionBox">
+              <span>Reflection</span>
+              <p id="reflectionText"></p>
             </div>
           </div>
+          <p class="reflection-demo-caption reveal">
+            <strong>Reflections are generated privately</strong> from what you
+            write in that moment — not from a shared profile, and never used to
+            train Yutova's models.
+          </p>
         </div>
       </section>
-      <section id="how">
+      <section id="steps">
         <div class="wrap">
           <div class="section-head reveal">
             <h2>Begin with what is real right now.</h2>
@@ -151,6 +157,56 @@
                 alt="Yutova app screen"
               />
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="memory-section">
+        <div class="wrap">
+          <div class="memory-section-head reveal">
+            <div class="eyebrow">The part that grows with you</div>
+            <h2>Yutova remembers, so you don't have to.</h2>
+            <p>
+              Every entry adds to a thread only you can see. When a pattern
+              resurfaces, Yutova connects it — quietly, and only when it's
+              useful.
+            </p>
+          </div>
+          <div class="memory-thread reveal">
+            <div class="memory-thread-node">
+              <div class="memory-node-dot"></div>
+              <div class="memory-node-date">6 weeks ago</div>
+              <div class="memory-node-entry">
+                “Dreading the Monday check-in again.”
+              </div>
+            </div>
+            <div class="memory-thread-node">
+              <div class="memory-node-dot"></div>
+              <div class="memory-node-date">3 weeks ago</div>
+              <div class="memory-node-entry">
+                “Avoided saying what I actually needed.”
+              </div>
+            </div>
+            <div class="memory-thread-node">
+              <div class="memory-node-dot"></div>
+              <div class="memory-node-date">Last week</div>
+              <div class="memory-node-entry">
+                “Same knot in my stomach before the call.”
+              </div>
+            </div>
+            <div class="memory-thread-node is-current">
+              <div class="memory-node-dot"></div>
+              <div class="memory-node-date">Today</div>
+              <div class="memory-node-entry">New insight</div>
+            </div>
+          </div>
+          <div class="memory-insight reveal">
+            <span>Noticed across 4 entries</span>
+            <p>
+              This is the third time a Monday conversation has come with the
+              same tightness before it happens, not during. Would it help to
+              name, once, what you actually need to say — before the dread
+              builds?
+            </p>
           </div>
         </div>
       </section>
@@ -248,6 +304,86 @@
           </div>
         </div>
       </section>
+      <section class="social-proof">
+        <div class="wrap">
+          <div class="social-proof-stat reveal">
+            <div class="social-proof-number">12,400+</div>
+            <div class="social-proof-label">
+              reflections shared in private beta
+            </div>
+          </div>
+          <blockquote class="social-proof-quote reveal">
+            <p>
+              “It's the first journaling app that didn't feel like it was trying
+              to fix me. It just noticed things I hadn't said out loud yet.”
+            </p>
+            <footer>— Private beta tester, 7 weeks of daily use</footer>
+          </blockquote>
+        </div>
+      </section>
+      <section class="pricing-section">
+        <div class="wrap">
+          <div class="pricing-section-head reveal">
+            <span>Simple, upfront</span>
+            <h2>Start free. Stay if it helps.</h2>
+            <p>
+              No trial tricks, no forced sign-up before you've written a word.
+            </p>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <h3>Free</h3>
+              <div class="pricing-amount">$0</div>
+              <p class="pricing-description">
+                Everything you need to begin a daily practice.
+              </p>
+              <ul>
+                <li>Unlimited journaling, write or speak</li>
+                <li>Gentle reflections on every entry</li>
+                <li>7-day journal history</li>
+                <li>Curated library access</li>
+              </ul>
+              <a class="btn light" href="#download">Start free</a>
+            </article>
+            <article class="pricing-card pricing-card-featured reveal">
+              <span class="pricing-badge">Most chosen</span>
+              <h3>Yutova+</h3>
+              <div class="pricing-amount">$6.99<span>/month</span></div>
+              <p class="pricing-description">
+                For the longer conversation with yourself.
+              </p>
+              <ul>
+                <li>Full journal history &amp; memory threads</li>
+                <li>Deeper, pattern-aware reflections</li>
+                <li>Unlimited voice journaling</li>
+                <li>Private, exportable at any time</li>
+              </ul>
+              <a class="btn" href="#download">Try Yutova+</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="platform-section">
+        <div class="wrap">
+          <div class="platform-copy reveal">
+            <h2>Wherever you reach for it.</h2>
+            <p>Yutova is live on iOS today. Android is coming soon.</p>
+          </div>
+          <div class="platform-options reveal">
+            <div class="platform-option">
+              <div class="platform-option-title">iOS</div>
+              <a class="btn" href="#download">Download</a>
+            </div>
+            <div class="platform-option">
+              <div class="platform-option-title">Android</div>
+              <span class="platform-status">Coming soon</span>
+            </div>
+            <p class="platform-note">
+              We'll share an update when Android is ready.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="privacy" id="privacy">
         <div class="wrap reveal">
           <div class="eyebrow">Your space</div>
@@ -274,7 +410,7 @@
       <div class="wrap footer-grid">
         <div><strong>yutova.</strong> © 2026</div>
         <div class="footer-links">
-          <a href="#">Privacy</a><a href="#">Terms</a
+          <a href="privacy-policy/">Privacy</a><a href="terms-of-use/">Terms</a
           ><a href="mailto:hello@yutova.app">Contact</a>
         </div>
       </div>
@@ -305,6 +441,53 @@
         }),
       );
       image.style.transition = ".25s ease";
+      const reflections = [
+        {
+          entry:
+            "Keep putting off the call with my sister. Don't even know why.",
+          reflection:
+            "You've mentioned this call a few times without naming what's underneath it. What do you think you're actually avoiding — the conversation, or how it might feel?",
+        },
+        {
+          entry: "Good day today. Slept well, felt present at work for once.",
+          reflection:
+            "Worth noticing: the days you describe as present tend to follow full nights of sleep. That's a pattern you could lean on.",
+        },
+        {
+          entry: "Anxious before the meeting again. Same feeling as always.",
+          reflection:
+            "This tightness before meetings has come up before. Would it help to write one honest sentence about what you're afraid will happen?",
+        },
+      ];
+      const typedText = document.getElementById("typedText");
+      const reflectionBox = document.getElementById("reflectionBox");
+      const reflectionText = document.getElementById("reflectionText");
+      let reflectionIndex = 0;
+
+      function typeReflection() {
+        const current = reflections[reflectionIndex % reflections.length];
+        let characterIndex = 0;
+        typedText.textContent = "";
+        reflectionText.textContent = "";
+        reflectionBox.classList.remove("show");
+
+        const typing = setInterval(() => {
+          typedText.textContent += current.entry[characterIndex];
+          characterIndex += 1;
+          if (characterIndex >= current.entry.length) {
+            clearInterval(typing);
+            setTimeout(() => {
+              reflectionText.textContent = current.reflection;
+              reflectionBox.classList.add("show");
+              setTimeout(() => {
+                reflectionIndex += 1;
+                typeReflection();
+              }, 5200);
+            }, 550);
+          }
+        }, 28);
+      }
+      typeReflection();
       const observer = new IntersectionObserver(
         (entries) =>
           entries.forEach((entry) => {

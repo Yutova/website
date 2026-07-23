@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yutova's Privacy Policy."
+    />
+    <title>Privacy Policy — Yutova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Manrope:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/legal.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="../" aria-label="Yutova home">
+        <img class="brand-logo" src="../assets/logo.svg" alt="" /><span
+          class="brand-name"
+          >Yutova</span
+        >
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../#how">How it works</a><a href="../#features">Features</a
+        ><a href="../#library">Library</a><a href="../#privacy">Privacy</a>
+      </div>
+      <a class="btn" href="../#download">Download app</a
+      ><button class="menu" id="menu" aria-label="Open menu">☰</button>
+    </nav>
+    <main>
+      <article class="legal-wrap legal-card">
+        <p class="eyebrow">Your privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: July 23, 2026</p>
+
+        <p>
+          Yutova is designed to be a private space for reflection. This policy
+          explains what information we collect, why we collect it, and the
+          choices available to you.
+        </p>
+
+        <h2>Information we collect</h2>
+        <p>
+          We may collect account information you provide, such as your email
+          address, along with information necessary to operate and secure the
+          service. Your journal entries, recordings, and reflections are treated
+          as personal content.
+        </p>
+
+        <h2>How we use information</h2>
+        <p>We use information to:</p>
+        <ul>
+          <li>provide, maintain, and improve Yutova;</li>
+          <li>generate reflections in response to your entries;</li>
+          <li>respond to support requests and communicate service updates; and</li>
+          <li>protect the safety, security, and integrity of the service.</li>
+        </ul>
+
+        <h2>Your journal content</h2>
+        <p>
+          Your journal content is private. We do not sell it or use it to train
+          public or shared AI models. We only process it as needed to provide
+          your requested Yutova experience.
+        </p>
+
+        <h2>Sharing information</h2>
+        <p>
+          We do not sell personal information. We may share limited information
+          with service providers that help us operate Yutova, where they are
+          bound to handle it only for those purposes. We may also disclose
+          information when required by law or to protect people and the service.
+        </p>
+
+        <h2>Your choices</h2>
+        <p>
+          You may request access to, correction of, or deletion of your personal
+          information, subject to applicable law. To make a request, contact us
+          at <a href="mailto:hello@yutova.app">hello@yutova.app</a>.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this policy from time to time. If we do, we will post the
+          revised version here and update the date above.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about privacy can be sent to
+          <a href="mailto:hello@yutova.app">hello@yutova.app</a>.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div><strong>yutova.</strong> © 2026</div>
+        <div class="footer-links">
+          <a href="../privacy-policy/">Privacy</a
+          ><a href="../terms-of-use/">Terms</a
+          ><a href="mailto:hello@yutova.app">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menu = document.getElementById("menu");
+      const navLinks = document.getElementById("navLinks");
+      menu.addEventListener("click", () => navLinks.classList.toggle("open"));
+      navLinks
+        .querySelectorAll("a")
+        .forEach((link) =>
+          link.addEventListener("click", () => navLinks.classList.remove("open")),
+        );
+    </script>
+  </body>
+</html>
