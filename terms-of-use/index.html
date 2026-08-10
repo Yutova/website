@@ -27,7 +27,7 @@
         <a href="../#how">How it works</a><a href="../#features">Features</a
         ><a href="../#library">Library</a><a href="../#privacy">Privacy</a>
       </div>
-      <a class="btn" href="../#download">Download app</a
+      <a class="btn app-download-btn" href="../#download">Download app</a
       ><button class="menu" id="menu" aria-label="Open menu">☰</button>
     </nav>
     <main>
@@ -51,18 +51,24 @@
 
         <h2>Eligibility and accounts</h2>
         <p>
-          You must provide accurate information when creating an account and keep
-          your account credentials secure. You are responsible for activity that
-          occurs through your account.
+          You must provide accurate information when creating an account and
+          keep your account credentials secure. You are responsible for activity
+          that occurs through your account.
         </p>
 
         <h2>Acceptable use</h2>
         <p>You agree not to misuse Yutova, including by:</p>
         <ul>
           <li>breaking applicable laws or infringing the rights of others;</li>
-          <li>interfering with the service or attempting unauthorized access;</li>
-          <li>using the service to distribute harmful software or content; or</li>
-          <li>reverse engineering the service except where the law permits it.</li>
+          <li>
+            interfering with the service or attempting unauthorized access;
+          </li>
+          <li>
+            using the service to distribute harmful software or content; or
+          </li>
+          <li>
+            reverse engineering the service except where the law permits it.
+          </li>
         </ul>
 
         <h2>Your content</h2>
@@ -91,7 +97,7 @@
         <h2>Contact</h2>
         <p>
           Questions about these terms can be sent to
-          <a href="mailto:hello@yutova.app">hello@yutova.app</a>.
+          <a href="mailto:help@yutova.com">help@yutova.com</a>.
         </p>
       </article>
     </main>
@@ -99,12 +105,37 @@
       <div class="wrap footer-grid">
         <div>© 2026 Yutova. All rights reserved.</div>
         <div class="footer-links">
-          <a href="../privacy-policy/">Privacy</a
-          ><a href="../terms-of-use/">Terms</a
-          ><a href="mailto:hello@yutova.app">Contact</a>
+          <a class="pre-release-hidden" href="../privacy-policy/">Privacy</a
+          ><a class="pre-release-hidden" href="../terms-of-use/">Terms</a
+          ><a href="mailto:help@yutova.com">Contact</a>
         </div>
       </div>
     </footer>
+    <div class="coming-soon-modal" id="comingSoonModal" hidden>
+      <div class="coming-soon-backdrop" data-close-modal></div>
+      <div
+        class="coming-soon-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="comingSoonTitle"
+      >
+        <button
+          class="coming-soon-close"
+          type="button"
+          aria-label="Close"
+          data-close-modal
+        >
+          &times;
+        </button>
+        <div class="eyebrow">Almost there</div>
+        <h2 id="comingSoonTitle">Coming soon</h2>
+        <p>
+          Yutova is launching soon. We'll let you know when it's ready to
+          download.
+        </p>
+        <button class="btn" type="button" data-close-modal>Got it</button>
+      </div>
+    </div>
     <script>
       const menu = document.getElementById("menu");
       const navLinks = document.getElementById("navLinks");
@@ -112,8 +143,33 @@
       navLinks
         .querySelectorAll("a")
         .forEach((link) =>
-          link.addEventListener("click", () => navLinks.classList.remove("open")),
+          link.addEventListener("click", () =>
+            navLinks.classList.remove("open"),
+          ),
         );
+
+      // Pre-release — remove when app launches
+      const comingSoonModal = document.getElementById("comingSoonModal");
+      function openComingSoonModal(event) {
+        event.preventDefault();
+        comingSoonModal.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+      function closeComingSoonModal() {
+        comingSoonModal.hidden = true;
+        document.body.style.overflow = "";
+      }
+      document
+        .querySelectorAll(".app-download-btn")
+        .forEach((btn) => btn.addEventListener("click", openComingSoonModal));
+      comingSoonModal
+        .querySelectorAll("[data-close-modal]")
+        .forEach((el) => el.addEventListener("click", closeComingSoonModal));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !comingSoonModal.hidden) {
+          closeComingSoonModal();
+        }
+      });
     </script>
   </body>
 </html>
