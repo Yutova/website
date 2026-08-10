@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Yutova is a private space to speak, reflect, and understand yourself more clearly." />
-  <title>Yutova — A clearer conversation with yourself</title>
+    content="Yutova helps you put what's on your mind into words, reflect on it, and notice what keeps coming back." />
+  <title>Yutova — A calm space to think out loud</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,12 +15,18 @@
 </head>
 
 <body>
-  <nav class="nav">
-    <a class="brand" href="#top" aria-label="Yutova home"><img class="brand-logo" src="assets/logo.svg" alt="" /><span
-        class="brand-name">Yutova</span></a>
+  <!-- Header / Navigation -->
+  <nav class="nav" id="mainNav">
+    <a class="brand" href="#top" aria-label="Yutova home">
+      <img class="brand-logo" src="assets/logo.svg" alt="" />
+      <span class="brand-name">Yutova</span>
+    </a>
     <div class="nav-links" id="navLinks">
-      <a href="#how">How it works</a><a href="#features">Features</a><a href="#library">Library</a><a
-        href="#privacy">Privacy</a>
+      <a href="#how">How it works</a>
+      <a href="#inside">Inside Yutova</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a class="btn app-download-btn" href="#download">Get Yutova</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">
@@ -29,23 +35,23 @@
       <span class="menu-line"></span>
     </button>
   </nav>
+
   <main id="top">
+    <!-- 1. Hero Section -->
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow">JOURNALING & SELF-REFLECTION</div>
-          <h1>A calm space to think out loud.</h1>
+          <div class="eyebrow">A MORE THOUGHTFUL DAILY PRACTICE</div>
+          <h1>Talk honestly.<br />Understand<br />yourself.</h1>
           <p>
-            Yutova is a journaling companion that helps you understand what you're feeling — and gently notices what
-            keeps repeating, without ever trying to fix you.
+            Share what's on your mind and receive gentle reflections that help you notice patterns, process emotions, and move forward with more clarity.
           </p>
           <div class="hero-actions">
-            <a class="btn app-download-btn" href="#download">Get Yutova</a><a class="btn light" href="#how">See
-              how it works</a>
+            <a class="btn app-download-btn" href="#download">Download for iOS</a>
+            <a class="btn light" href="#how">See how it works</a>
           </div>
           <div class="hero-note">
-            Private by design — reflections are generated on your entry, never
-            used to train models.
+            Private by design — reflections are generated on your entry, never used to train models.
           </div>
         </div>
         <div class="phone-stage reveal">
@@ -54,23 +60,101 @@
             <img src="assets/home.png" alt="Yutova home screen" />
           </div>
           <div class="float-note">
-            <strong>A space that listens.</strong>Write, speak, pause, and
-            begin wherever you are.
+            <strong>A space that listens.</strong>Write, speak, pause, and begin wherever you are.
           </div>
         </div>
       </div>
     </section>
-    <div class="trust">
-      <div class="wrap trust-grid">
-        <div class="trust-item">Private by design</div>
-        <div class="trust-item">Write or speak naturally</div>
-        <div class="trust-item">Reflections shaped around you</div>
+
+    <!-- 2. Why Yutova -->
+    <section class="why-yutova" id="why">
+      <div class="wrap">
+        <div class="why-yutova-content reveal">
+          <div class="eyebrow">MORE THAN A PLACE TO WRITE</div>
+          <h2>A journal holds your thoughts.<br />Yutova helps you understand them.</h2>
+          <div class="why-thread-visual">
+            <div class="why-thread-step">
+              <span class="why-dot"></span>
+              <span class="why-entry-label">You write about work on Monday.</span>
+            </div>
+            <div class="why-thread-connector"></div>
+            <div class="why-thread-step">
+              <span class="why-dot"></span>
+              <span class="why-entry-label">Stress comes back on Thursday.</span>
+            </div>
+            <div class="why-thread-connector"></div>
+            <div class="why-thread-step">
+              <span class="why-dot"></span>
+              <span class="why-entry-label">The same uncertainty returns two weeks later.</span>
+            </div>
+          </div>
+          <div class="why-summary">
+            <p class="why-individual">Individually, they're just entries.</p>
+            <p class="why-connected">Over time, Yutova helps you notice the thread connecting them.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <section class="reflection-demo" id="how">
+    </section>
+
+    <!-- Background Image Section: When Something Is On Your Mind -->
+    <section class="bg-section bg-section-0" aria-label="When something is on your mind">
+      <div class="wrap">
+        <div class="bg-section-copy reveal">
+          <div class="eyebrow">WHEN SOMETHING IS ON YOUR MIND</div>
+          <h2>You don't always know what you're feeling until you put it into words.</h2>
+          <p>
+            Start with whatever is there — a thought, a worry, a question, or simply how today felt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How Yutova Works -->
+    <section class="how-works" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">HOW YUTOVA WORKS</div>
+          <h2>A thoughtful daily rhythm.</h2>
+          <p>
+            Three simple moments that turn unstructured thoughts into gentle clarity.
+          </p>
+        </div>
+        <div class="steps-flow">
+          <article class="step-card reveal">
+            <div class="step-num">01</div>
+            <h3>Write, or speak</h3>
+            <p>
+              A gentle prompt when you want one, a blank page when you don't.
+            </p>
+          </article>
+          <div class="step-flow-arrow" aria-hidden="true">→</div>
+          <article class="step-card reveal">
+            <div class="step-num">02</div>
+            <h3>Receive a reflection</h3>
+            <p>
+              Yutova reflects what it noticed without diagnosing you or trying to fix you.
+            </p>
+          </article>
+          <div class="step-flow-arrow" aria-hidden="true">→</div>
+          <article class="step-card reveal">
+            <div class="step-num">03</div>
+            <h3>Understand patterns over time</h3>
+            <p>
+              As your journal grows, recurring themes and emotional patterns become easier to see.
+            </p>
+          </article>
+        </div>
+        <div class="how-cta-wrap reveal">
+          <a class="btn light" href="#reflection-demo">See how it feels ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Reflection Demo -->
+    <section class="reflection-demo" id="reflection-demo">
       <div class="wrap">
         <div class="reflection-demo-heading reveal">
-          <div class="eyebrow">See a reflection happen</div>
+          <div class="eyebrow">YOUR WORDS, REFLECTED BACK</div>
           <h2>Type a few honest words. Watch what comes back.</h2>
           <p>No script, no template — just space to think out loud.</p>
         </div>
@@ -90,74 +174,30 @@
           write in that moment — not from a shared profile, and never used to
           train Yutova's models.
         </p>
+        <div class="demo-cta-wrap reveal">
+          <a class="btn app-download-btn" href="#download">Try Yutova</a>
+        </div>
       </div>
     </section>
-    <section id="steps">
+
+    <!-- 5. Background Image Section #1 (Emotional Pause) -->
+    <section class="bg-section bg-section-1" aria-label="A moment for yourself">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="eyebrow">A thoughtful daily rhythm</div>
-          <h2>Most journaling apps forget you the moment you close them.</h2>
+        <div class="bg-section-copy reveal">
+          <div class="eyebrow">A MOMENT FOR YOURSELF</div>
+          <h2>You don't have to figure it all out today.</h2>
           <p>
-            Yutova doesn't. It remembers what you've written — not to keep score, but to notice
-            what keeps repeating.
+            Sometimes putting a thought into words is enough to see it differently.
           </p>
         </div>
-        <div class="steps">
-          <article class="step reveal">
-            <div class="step-num">01</div>
-            <h3>Write, or speak</h3>
-            <p>
-              A gentle prompt when you want one, a blank page when you don't. Voice
-              journaling for the days typing feels like too much.
-            </p>
-          </article>
-          <article class="step reveal">
-            <div class="step-num">02</div>
-            <h3>A reflection, not a fix</h3>
-            <p>
-              Yutova reflects back what it noticed, in language that sounds like a thoughtful
-              friend — never a diagnosis, never advice you didn't ask for.
-            </p>
-          </article>
-          <article class="step reveal">
-            <div class="step-num">03</div>
-            <h3>Patterns, over time</h3>
-            <p>
-              The same worry before the same Monday. The same relief after the same walk.
-              Threads you'd never catch in one entry, surfaced gently across many.
-            </p>
-          </article>
-        </div>
       </div>
     </section>
-    <section class="showcase" id="features">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div class="eyebrow">Inside the app</div>
-          <h2>One quiet place for your inner life.</h2>
-          <p>
-            Journal freely, revisit meaningful reflections, understand
-            emotional patterns, and keep useful resources close.
-          </p>
-        </div>
-        <div class="tabs" role="tablist">
-          <button class="tab active" data-screen="home.png">Home</button><button class="tab"
-            data-screen="journal.png">Journal</button><button class="tab"
-            data-screen="insights.png">Insights</button><button class="tab" data-screen="library-books.png">
-            Library
-          </button>
-        </div>
-        <div class="showcase-stage reveal">
-          <div class="showcase-phone">
-            <img id="showcaseImage" src="assets/home.png" alt="Yutova app screen" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="memory-section">
+
+    <!-- 6. Memory & Patterns -->
+    <section class="memory-section" id="patterns">
       <div class="wrap">
         <div class="memory-section-head reveal">
-          <div class="eyebrow">The part that grows with you</div>
+          <div class="eyebrow">OVER TIME</div>
           <h2>Yutova remembers, so you don't have to.</h2>
           <p>
             Every entry adds to a thread only you can see. When a pattern
@@ -204,86 +244,119 @@
         </div>
       </div>
     </section>
-    <section class="visual-story visual-story-lake">
+
+    <!-- 7. Inside Yutova -->
+    <section class="showcase" id="inside">
       <div class="wrap">
-        <div class="visual-story-copy reveal">
-          <div class="eyebrow">Make room for stillness</div>
-          <h2>You do not have to solve everything today.</h2>
-          <p>
-            A few honest minutes can be enough to hear what your mind has been
-            trying to say.
+        <div class="section-head reveal">
+          <div class="eyebrow">INSIDE YUTOVA</div>
+          <h2>One quiet place for your inner life.</h2>
+          <p id="showcaseDescription">
+            Your current reflection, recent activity, and a simple place to begin.
           </p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Inside Yutova areas">
+          <button class="tab active" role="tab" aria-selected="true" data-screen="home.png"
+            data-desc="Your current reflection, recent activity, and a simple place to begin.">Home</button>
+          <button class="tab" role="tab" aria-selected="false" data-screen="journal.png"
+            data-desc="Write or speak freely and revisit previous entries and reflections.">Journal</button>
+          <button class="tab" role="tab" aria-selected="false" data-screen="insights.png"
+            data-desc="See recurring themes, patterns, summaries, and changes over time.">Insights</button>
+          <button class="tab" role="tab" aria-selected="false" data-screen="library-books.png"
+            data-desc="Explore books, podcasts, exercises, and short reads relevant to reflection and growth.">Library</button>
+        </div>
+        <div class="showcase-stage reveal">
+          <div class="showcase-phone">
+            <img id="showcaseImage" src="assets/home.png" alt="Yutova app screen" />
+          </div>
+        </div>
+        <div class="showcase-cta reveal">
+          <a class="btn light" href="#features">Explore Yutova ↓</a>
         </div>
       </div>
     </section>
-    <section>
+
+    <!-- 8. Background Image Section #2 (Lifestyle / Habit) -->
+    <section class="bg-section bg-section-2" aria-label="A practice that grows with you">
+      <div class="wrap">
+        <div class="bg-section-copy reveal">
+          <div class="eyebrow">A PRACTICE THAT GROWS WITH YOU</div>
+          <h2>A quiet habit that becomes yours.</h2>
+          <p>
+            A few honest minutes today can become a clearer picture of yourself over time.
+          </p>
+          <div class="bg-action">
+            <a class="btn btn-accent app-download-btn" href="#download">Start your first entry</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Features -->
+    <section class="features-section" id="features">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">Features</div>
-          <h2>Everything you need. Nothing you do not.</h2>
+          <div class="eyebrow">BUILT FOR YOUR WAY OF REFLECTING</div>
+          <h2>Everything you need to reflect.</h2>
           <p>
-            A focused experience designed to make reflection feel natural
-            rather than demanding.
+            A focused experience designed to make reflection feel natural rather than demanding.
           </p>
         </div>
         <div class="features-grid">
           <article class="feature reveal">
-            <span class="feature-icon feature-icon-reflections" aria-hidden="true"></span>
+            <span class="feature-icon feature-icon-journal" aria-hidden="true"></span>
             <div>
-              <h3>Guided reflections</h3>
-              <p>Go deeper without facing an intimidating blank page.</p>
+              <h3>Guided or free writing</h3>
+              <p>Start with a prompt or simply write what's on your mind.</p>
             </div>
           </article>
           <article class="feature reveal">
             <span class="feature-icon feature-icon-voice" aria-hidden="true"></span>
             <div>
               <h3>Voice journaling</h3>
-              <p>Speak naturally when writing does not feel right.</p>
+              <p>Speak when typing feels like too much.</p>
             </div>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon feature-icon-insights" aria-hidden="true"></span>
+            <span class="feature-icon feature-icon-reflections" aria-hidden="true"></span>
             <div>
-              <h3>Personal insights</h3>
-              <p>See recurring emotions, themes, and meaningful changes.</p>
+              <h3>Personal reflections</h3>
+              <p>Receive thoughtful reflections shaped around what you share.</p>
             </div>
           </article>
           <article class="feature reveal">
             <span class="feature-icon feature-icon-pattern" aria-hidden="true"></span>
             <div>
-              <h3>Pattern & memory</h3>
-              <p>
-                Yutova notices when something genuinely repeats, gently.
-              </p>
+              <h3>Patterns &amp; memory</h3>
+              <p>Notice recurring themes across entries.</p>
             </div>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon feature-icon-journal" aria-hidden="true"></span>
+            <span class="feature-icon feature-icon-insights" aria-hidden="true"></span>
             <div>
-              <h3>Journal history</h3>
-              <p>
-                Return to past entries and remember how far you have come.
-              </p>
+              <h3>Weekly, monthly &amp; yearly insights</h3>
+              <p>Step back from individual days and see the bigger picture.</p>
             </div>
           </article>
           <article class="feature reveal">
             <span class="feature-icon feature-icon-library" aria-hidden="true"></span>
             <div>
-              <h3>Curated library</h3>
-              <p>Keep books, podcasts, exercises, and thoughtful resources nearby.</p>
+              <h3>Resources for the moment</h3>
+              <p>Discover relevant books, podcasts, exercises, and short reads.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- 10. Library -->
     <section class="library" id="library">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">Curated library</div>
-          <h2>Read. Listen. Practice.</h2>
+          <div class="eyebrow">GO A LITTLE FURTHER</div>
+          <h2>Go further when something stays with you.</h2>
           <p>
-            Continue the conversation beyond your journal with a calm, curated
-            library of books, podcasts, and exercises.
+            When something in a reflection feels worth exploring, Yutova keeps thoughtful resources close.
           </p>
         </div>
         <div class="library-marquee reveal">
@@ -370,38 +443,48 @@
                 <img src="assets/library-exercises.png" alt="Yutova exercises library" />
               </div>
             </article>
-
-            <!-- Duplicate Set 3 for ultra-wide monitors -->
-            <article class="library-card" aria-hidden="true">
-              <h3>Books for the moment you are in.</h3>
-              <p>Find relevant reading without endless searching.</p>
-              <div class="phone">
-                <img src="assets/library-books.png" alt="Yutova books library" />
-              </div>
-            </article>
-            <article class="library-card" aria-hidden="true">
-              <h3>Podcasts worth slowing down for.</h3>
-              <p>
-                Listen to thoughtful voices that support reflection and growth.
-              </p>
-              <div class="phone">
-                <img src="assets/library-podcasts.png" alt="Yutova podcasts library" />
-              </div>
-            </article>
-            <article class="library-card" aria-hidden="true">
-              <h3>Exercises to ground and refocus.</h3>
-              <p>
-                Simple, guided practices for when your mind needs a pause.
-              </p>
-              <div class="phone">
-                <img src="assets/library-exercises.png" alt="Yutova exercises library" />
-              </div>
-            </article>
           </div>
         </div>
       </div>
     </section>
-    <section class="social-proof">
+
+    <!-- 11. Background Image Section #3 (Space to Notice) -->
+    <section class="bg-section bg-section-3" aria-label="Space to notice">
+      <div class="wrap">
+        <div class="bg-section-copy reveal">
+          <div class="eyebrow">SPACE TO NOTICE</div>
+          <h2>A little space can change the way you see things.</h2>
+          <p>
+            You don't always need another answer. Sometimes you need enough quiet to notice what's already there.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Privacy & Trust -->
+    <section class="privacy" id="privacy">
+      <div class="wrap">
+        <div class="privacy-card reveal">
+          <div class="eyebrow">PRIVATE, ON PURPOSE</div>
+          <h2>Your entries are yours.</h2>
+          <p class="privacy-lead">
+            They're used to generate your reflections — never to train an AI model, and never shared
+            beyond what's needed to create them.
+          </p>
+          <p class="privacy-disclaimer">
+            Yutova is a self-reflection tool, not a therapist, medical service, or replacement for
+            professional mental health care. If you're in crisis, please reach out to a crisis line or a
+            professional.
+          </p>
+          <p class="privacy-footer-note">
+            Full privacy details available in the <a href="privacy-policy/">Privacy Policy</a>, linked below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Social Proof -->
+    <section class="social-proof" id="social-proof">
       <div class="wrap">
         <div class="social-proof-stat reveal">
           <div class="social-proof-number">12,400+</div>
@@ -410,6 +493,7 @@
           </div>
         </div>
         <blockquote class="social-proof-quote reveal">
+          <div class="eyebrow quote-eyebrow">FROM YUTOVA USERS</div>
           <p>
             “It's the first journaling app that didn't feel like it was trying
             to fix me. It just noticed things I hadn't said out loud yet.”
@@ -418,19 +502,9 @@
         </blockquote>
       </div>
     </section>
-    <section class="visual-story visual-story-forest">
-      <div class="wrap">
-        <div class="visual-story-copy reveal">
-          <div class="eyebrow">Return to yourself</div>
-          <h2>Clarity grows when you give it somewhere to land.</h2>
-          <p>
-            Yutova helps you slow down, notice what matters, and carry one
-            useful insight into your next day.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="pricing-section">
+
+    <!-- 14. Pricing -->
+    <section class="pricing-section" id="pricing">
       <div class="wrap">
         <div class="pricing-section-head reveal">
           <div class="eyebrow">Simple, upfront</div>
@@ -493,69 +567,189 @@
         </div>
       </div>
     </section>
-    <section class="platform-section">
+
+    <!-- 15. FAQ -->
+    <section class="faq-section" id="faq">
       <div class="wrap">
-        <div class="platform-copy reveal">
-          <div class="eyebrow">Platforms</div>
-          <h2>Wherever you reach for it.</h2>
-          <p>Yutova is launching soon on iOS and Android.</p>
-        </div>
-        <div class="platform-options reveal">
-          <div class="platform-option">
-            <div class="platform-option-title">iOS</div>
-            <a class="btn app-download-btn" href="#download">Download</a>
-          </div>
-          <div class="platform-option">
-            <div class="platform-option-title">Android</div>
-            <span class="platform-status">Coming soon</span>
-          </div>
-          <p class="platform-note">
-            We'll share an update when Android is ready.
+        <div class="section-head reveal">
+          <div class="eyebrow">QUESTIONS</div>
+          <h2>A few things you may want to know.</h2>
+          <p>
+            Clear answers about privacy, AI reflections, and how Yutova fits into your life.
           </p>
+        </div>
+        <div class="faq-accordion reveal">
+          <!-- Item 1 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Is Yutova therapy?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>No. Yutova is a self-reflection tool and journaling companion, not a therapist, medical provider, or mental healthcare service. It is designed to help you organize thoughts and recognize patterns on your own terms.</p>
+            </div>
+          </details>
+
+          <!-- Item 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How does Yutova use AI?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yutova uses language models as a quiet sounding board. When you complete an entry, the AI reads what you wrote to surface thoughtful observations, questions, and patterns—without diagnosing, judging, or telling you what to do.</p>
+            </div>
+          </details>
+
+          <!-- Item 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Are my journal entries private?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. Your entries belong entirely to you. Your data is encrypted, protected by strict privacy policies, and never shared or sold to third parties.</p>
+            </div>
+          </details>
+
+          <!-- Item 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Are my entries used to train AI?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>No. Your journal entries and voice recordings are processed solely to create reflections and insights for your personal account. They are never used to train public or foundational AI models.</p>
+            </div>
+          </details>
+
+          <!-- Item 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I use Yutova without writing every day?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. Yutova does not have mandatory streaks, guilt notifications, or rigid requirements. You can check in daily, a couple of times a week, or whenever you need space to think.</p>
+            </div>
+          </details>
+
+          <!-- Item 6 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I journal by voice?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. You can speak naturally into Yutova. The app transcribes your voice entry and generates reflections just as it would with written text, perfect for when typing feels cumbersome.</p>
+            </div>
+          </details>
+
+          <!-- Item 7 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What's included in Yutova Free?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yutova Free gives you unlimited journaling (both text and voice), thoughtful reflections on every entry, a 7-day history window, and full access to our curated library.</p>
+            </div>
+          </details>
+
+          <!-- Item 8 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What does Yutova Pro add?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yutova Pro unlocks your full journal history, long-term memory threads, deeper pattern recognition across weeks and months, and comprehensive weekly, monthly, and yearly insights.</p>
+            </div>
+          </details>
+
+          <!-- Item 9 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I cancel anytime?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. You can manage or cancel your subscription at any time directly through your App Store account settings with no hassle or cancellation fees.</p>
+            </div>
+          </details>
+
+          <!-- Item 10 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I delete or export my data?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. You have full ownership of your data. You can export your entries anytime or delete your account and all associated data permanently whenever you choose.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
-    <section class="privacy" id="privacy">
+
+    <!-- 16. Background Image Section #4 / Final CTA -->
+    <section class="bg-section bg-section-4 final-cta" id="download" aria-label="Get Yutova">
       <div class="wrap">
-        <div class="privacy-card reveal">
-          <div class="eyebrow">PRIVATE, ON PURPOSE</div>
-          <h2>Your entries are yours.</h2>
-          <p class="privacy-lead">
-            They're used to generate your reflections — never to train an AI model, and never shared
-            beyond what's needed to create them.
+        <div class="bg-section-copy final-cta-copy reveal">
+          <div class="eyebrow">START WHERE YOU ARE</div>
+          <h2>Come back to yourself.</h2>
+          <p>
+            You don't need the right words.<br />
+            Just begin with what's on your mind.
           </p>
-          <p class="privacy-disclaimer">
-            Yutova is a self-reflection tool, not a therapist, medical service, or replacement for
-            professional mental health care. If you're in crisis, please reach out to a crisis line or a
-            professional.
-          </p>
-          <p class="privacy-footer-note">
-            Full privacy details available in the <a href="privacy-policy/">Privacy Policy</a>, linked below.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="download">
-      <div class="wrap">
-        <div class="cta-box reveal">
-          <div>
-            <div class="eyebrow">Start where you are</div>
-            <h2>A clearer conversation with yourself begins here.</h2>
+          <div class="final-cta-actions">
+            <a class="btn btn-accent app-download-btn" href="#">Get Yutova</a>
+            <span class="final-cta-subline">Free to start · No credit card required</span>
           </div>
-          <a class="btn app-download-btn" href="#">Get Yutova</a>
+          <div class="final-platform-badges">
+            <span class="platform-badge platform-badge-active">Available on iOS</span>
+            <span class="platform-badge platform-badge-muted">Android — Coming soon</span>
+          </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- 17. Footer -->
   <footer>
     <div class="wrap footer-grid">
-      <div>© 2026 Yutova. All rights reserved.</div>
-      <div class="footer-links">
-        <a class="pre-release-hidden" href="privacy-policy/">Privacy</a><a class="pre-release-hidden"
-          href="terms-of-use/">Terms</a><a href="mailto:help@yutova.com">Contact</a>
+      <div class="footer-brand-col">
+        <a class="brand" href="#top" aria-label="Yutova home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Yutova</span>
+        </a>
+        <p class="footer-copy">© 2026 Yutova. All rights reserved.</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <span class="footer-heading">Product</span>
+          <a href="#how">How it works</a>
+          <a href="#inside">Inside Yutova</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Company &amp; Legal</span>
+          <a href="about/">About us</a>
+          <a href="privacy-policy/">Privacy</a>
+          <a href="terms-of-use/">Terms</a>
+          <a href="about/#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Download</span>
+          <a class="app-download-btn" href="#download">App Store</a>
+          <span class="footer-subtext">Android — Coming soon</span>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Coming Soon Modal -->
   <div class="coming-soon-modal" id="comingSoonModal" hidden>
     <div class="coming-soon-backdrop" data-close-modal></div>
     <div class="coming-soon-dialog" role="dialog" aria-modal="true" aria-labelledby="comingSoonTitle">
@@ -568,10 +762,12 @@
         Yutova is launching soon. We'll let you know when it's ready to
         download.
       </p>
-      <button class="btn" type="button" data-close-modal>Got it</button>
+      <button class="btn btn-accent" type="button" data-close-modal>Got it</button>
     </div>
   </div>
+
   <script>
+    // Navigation Toggle (Mobile)
     const menu = document.getElementById("menu");
     const navLinks = document.getElementById("navLinks");
     menu.addEventListener("click", () => {
@@ -580,37 +776,44 @@
       menu.setAttribute("aria-expanded", String(isOpen));
       menu.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
-    navLinks
-      .querySelectorAll("a")
-      .forEach((a) =>
-        a.addEventListener("click", () => {
-          navLinks.classList.remove("open");
-          menu.classList.remove("is-open");
-          menu.setAttribute("aria-expanded", "false");
-          menu.setAttribute("aria-label", "Open menu");
-        }),
-      );
-    const image = document.getElementById("showcaseImage");
+    navLinks.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menu.classList.remove("is-open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-label", "Open menu");
+      })
+    );
+
+    // Inside Yutova Showcase Tab Switching
+    const showcaseImage = document.getElementById("showcaseImage");
+    const showcaseDescription = document.getElementById("showcaseDescription");
     document.querySelectorAll(".tab").forEach((tab) =>
       tab.addEventListener("click", () => {
-        document
-          .querySelectorAll(".tab")
-          .forEach((t) => t.classList.remove("active"));
+        document.querySelectorAll(".tab").forEach((t) => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
         tab.classList.add("active");
-        image.style.opacity = "0";
-        image.style.transform = "translateY(10px)";
+        tab.setAttribute("aria-selected", "true");
+        if (showcaseDescription && tab.dataset.desc) {
+          showcaseDescription.textContent = tab.dataset.desc;
+        }
+        showcaseImage.style.opacity = "0";
+        showcaseImage.style.transform = "translateY(10px)";
         setTimeout(() => {
-          image.src = "assets/" + tab.dataset.screen;
-          image.style.opacity = "1";
-          image.style.transform = "none";
+          showcaseImage.src = "assets/" + tab.dataset.screen;
+          showcaseImage.style.opacity = "1";
+          showcaseImage.style.transform = "none";
         }, 180);
-      }),
+      })
     );
-    image.style.transition = ".25s ease";
+    if (showcaseImage) showcaseImage.style.transition = ".25s ease";
+
+    // Reflection Demo Simulation
     const reflections = [
       {
-        entry:
-          "Keep putting off the call with my sister. Don't even know why.",
+        entry: "Keep putting off the call with my sister. Don't even know why.",
         reflection:
           "You've mentioned this call a few times without naming what's underneath it. What do you think you're actually avoiding — the conversation, or how it might feel?",
       },
@@ -631,6 +834,7 @@
     let reflectionIndex = 0;
 
     function typeReflection() {
+      if (!typedText || !reflectionBox || !reflectionText) return;
       const current = reflections[reflectionIndex % reflections.length];
       let characterIndex = 0;
       typedText.textContent = "";
@@ -653,20 +857,25 @@
       }, 28);
     }
     typeReflection();
+
+    // Scroll Reveal Observer
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((entry) => {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         }),
-      { threshold: 0.12 },
+      { threshold: 0.12 }
     );
-    document
-      .querySelectorAll(".reveal")
-      .forEach((el) => observer.observe(el));
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-    // Pre-release — remove when app launches
+    // Pre-release Coming Soon Modal
     const comingSoonModal = document.getElementById("comingSoonModal");
     function openComingSoonModal(event) {
+      const href = this.getAttribute("href");
+      if (href && href.startsWith("#") && href !== "#" && href !== "#download") {
+        // Normal in-page anchor navigation
+        return;
+      }
       event.preventDefault();
       comingSoonModal.hidden = false;
       document.body.style.overflow = "hidden";

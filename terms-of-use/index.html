@@ -15,19 +15,20 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/legal.css" />
   </head>
-  <body>
-    <nav class="nav">
+    <!-- Header / Navigation -->
+    <nav class="nav" id="mainNav">
       <a class="brand" href="../" aria-label="Yutova home">
-        <img class="brand-logo" src="../assets/logo.svg" alt="" /><span
-          class="brand-name"
-          >Yutova</span
-        >
+        <img class="brand-logo" src="../assets/logo.svg" alt="" />
+        <span class="brand-name">Yutova</span>
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="../#how">How it works</a><a href="../#features">Features</a
-        ><a href="../#library">Library</a><a href="../#privacy">Privacy</a>
+        <a href="../#how">How it works</a>
+        <a href="../#inside">Inside Yutova</a>
+        <a href="../#privacy">Privacy</a>
+        <a href="../#pricing">Pricing</a>
+        <a href="../#faq">FAQ</a>
       </div>
-      <a class="btn app-download-btn" href="../#download">Download app</a>
+      <a class="btn app-download-btn" href="../#download">Get Yutova</a>
       <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">
         <span class="menu-line"></span>
         <span class="menu-line"></span>
@@ -105,39 +106,52 @@
         </p>
       </article>
     </main>
+    <!-- Footer -->
     <footer>
       <div class="wrap footer-grid">
-        <div>© 2026 Yutova. All rights reserved.</div>
-        <div class="footer-links">
-          <a class="pre-release-hidden" href="../privacy-policy/">Privacy</a
-          ><a class="pre-release-hidden" href="../terms-of-use/">Terms</a
-          ><a href="mailto:help@yutova.com">Contact</a>
+        <div class="footer-brand-col">
+          <a class="brand" href="../" aria-label="Yutova home">
+            <img class="brand-logo" src="../assets/logo.svg" alt="" />
+            <span class="brand-name">Yutova</span>
+          </a>
+          <p class="footer-copy">© 2026 Yutova. All rights reserved.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <span class="footer-heading">Product</span>
+            <a href="../#how">How it works</a>
+            <a href="../#inside">Inside Yutova</a>
+            <a href="../#pricing">Pricing</a>
+            <a href="../#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">Company &amp; Legal</span>
+            <a href="../about/">About us</a>
+            <a href="../privacy-policy/">Privacy</a>
+            <a href="../terms-of-use/">Terms</a>
+            <a href="../about/#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">Download</span>
+            <a class="app-download-btn" href="../#download">App Store</a>
+            <span class="footer-subtext">Android — Coming soon</span>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Coming Soon Modal -->
     <div class="coming-soon-modal" id="comingSoonModal" hidden>
       <div class="coming-soon-backdrop" data-close-modal></div>
-      <div
-        class="coming-soon-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="comingSoonTitle"
-      >
-        <button
-          class="coming-soon-close"
-          type="button"
-          aria-label="Close"
-          data-close-modal
-        >
-          &times;
-        </button>
+      <div class="coming-soon-dialog" role="dialog" aria-modal="true" aria-labelledby="comingSoonTitle">
+        <button class="coming-soon-close" type="button" aria-label="Close" data-close-modal>&times;</button>
         <div class="eyebrow">Almost there</div>
         <h2 id="comingSoonTitle">Coming soon</h2>
         <p>
           Yutova is launching soon. We'll let you know when it's ready to
           download.
         </p>
-        <button class="btn" type="button" data-close-modal>Got it</button>
+        <button class="btn btn-accent" type="button" data-close-modal>Got it</button>
       </div>
     </div>
     <script>
