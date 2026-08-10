@@ -27,8 +27,12 @@
         <a href="../#how">How it works</a><a href="../#features">Features</a
         ><a href="../#library">Library</a><a href="../#privacy">Privacy</a>
       </div>
-      <a class="btn app-download-btn" href="../#download">Download app</a
-      ><button class="menu" id="menu" aria-label="Open menu">☰</button>
+      <a class="btn app-download-btn" href="../#download">Download app</a>
+      <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
     </nav>
     <main>
       <article class="legal-wrap legal-card">
@@ -134,13 +138,21 @@
     <script>
       const menu = document.getElementById("menu");
       const navLinks = document.getElementById("navLinks");
-      menu.addEventListener("click", () => navLinks.classList.toggle("open"));
+      menu.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menu.classList.toggle("is-open", isOpen);
+        menu.setAttribute("aria-expanded", String(isOpen));
+        menu.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      });
       navLinks
         .querySelectorAll("a")
         .forEach((link) =>
-          link.addEventListener("click", () =>
-            navLinks.classList.remove("open"),
-          ),
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menu.classList.remove("is-open");
+            menu.setAttribute("aria-expanded", "false");
+            menu.setAttribute("aria-label", "Open menu");
+          }),
         );
 
       // Pre-release — remove when app launches
