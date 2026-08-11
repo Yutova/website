@@ -75,129 +75,427 @@
       </section>
 
       <!-- TOPICS -->
-      <section class="support-topics" data-ga-section="support_topics">
+      <section class="support-topics" data-ga-section="support_topics" aria-label="Support Topics">
         <div class="support-section-heading">
           <span class="support-eyebrow">A GOOD PLACE TO START</span>
           <h2>What do you need help with?</h2>
           <p>
-            Here are some of the things we can help you with.
+            Select a topic to explore frequently asked questions and guides.
           </p>
         </div>
 
-        <div class="support-topic-grid">
-          <article class="support-topic">
+        <div class="support-topic-grid" role="tablist" aria-label="Support topic categories">
+          <article class="support-topic is-active" role="tab" tabindex="0" aria-selected="true" data-topic="account"
+            aria-controls="faq-group-account" id="tab-account">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-account" aria-hidden="true"></span>
-            <h3>Account &amp; sign in</h3>
-            <p>
-              Help signing in, resetting your password, updating account details, or accessing your Yutova account.
-            </p>
+            <div>
+              <h3>Account &amp; sign in</h3>
+              <p>
+                Help signing in, resetting your password, updating account details, or accessing your Yutova account.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
 
-          <article class="support-topic">
+          <article class="support-topic" role="tab" tabindex="0" aria-selected="false" data-topic="subscription"
+            aria-controls="faq-group-subscription" id="tab-subscription">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-subscription" aria-hidden="true"></span>
-            <h3>Subscription &amp; billing</h3>
-            <p>
-              Questions about Yutova Free, Yutova Pro, purchases, renewals, cancellations, or billing.
-            </p>
+            <div>
+              <h3>Subscription &amp; billing</h3>
+              <p>
+                Questions about Yutova Free, Yutova Pro, purchases, renewals, cancellations, or billing.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
 
-          <article class="support-topic">
+          <article class="support-topic" role="tab" tabindex="0" aria-selected="false" data-topic="journal"
+            aria-controls="faq-group-journal" id="tab-journal">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-journal" aria-hidden="true"></span>
-            <h3>Journaling &amp; reflections</h3>
-            <p>
-              Get help with entries, voice journaling, reflections, insights, memory, or other Yutova features.
-            </p>
+            <div>
+              <h3>Journaling &amp; reflections</h3>
+              <p>
+                Get help with entries, voice journaling, reflections, insights, memory, or other Yutova features.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
 
-          <article class="support-topic">
+          <article class="support-topic" role="tab" tabindex="0" aria-selected="false" data-topic="privacy"
+            aria-controls="faq-group-privacy" id="tab-privacy">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-privacy" aria-hidden="true"></span>
-            <h3>Privacy &amp; your data</h3>
-            <p>
-              Questions about your entries, privacy, exporting your information, or deleting your account and data.
-            </p>
+            <div>
+              <h3>Privacy &amp; your data</h3>
+              <p>
+                Questions about your entries, privacy, exporting your information, or deleting your account and data.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
 
-          <article class="support-topic">
+          <article class="support-topic" role="tab" tabindex="0" aria-selected="false" data-topic="issues"
+            aria-controls="faq-group-issues" id="tab-issues">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-issues" aria-hidden="true"></span>
-            <h3>Something isn't working</h3>
-            <p>
-              Tell us about crashes, unexpected behavior, missing content, or anything else that doesn't seem right.
-            </p>
+            <div>
+              <h3>Something isn't working</h3>
+              <p>
+                Tell us about crashes, unexpected behavior, missing content, or anything else that doesn't seem right.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
 
-          <article class="support-topic">
+          <article class="support-topic" role="tab" tabindex="0" aria-selected="false" data-topic="help"
+            aria-controls="faq-group-help" id="tab-help">
+            <span class="support-topic-active-pill">Selected</span>
             <span class="support-topic-icon support-topic-icon-help" aria-hidden="true"></span>
-            <h3>Something else</h3>
-            <p>
-              Can't find your question here? Send us a message and we'll point you in the right direction.
-            </p>
+            <div>
+              <h3>Something else</h3>
+              <p>
+                Can't find your question here? Send us a message and we'll point you in the right direction.
+              </p>
+            </div>
+            <span class="support-topic-action">View FAQs ↓</span>
           </article>
         </div>
       </section>
 
-      <!-- QUICK ANSWERS -->
-      <section class="support-faq-section" data-ga-section="support_faq">
+      <!-- FAQS -->
+      <section class="support-faq-section" id="supportFaqSection" data-ga-section="support_faq">
         <div class="support-section-heading">
-          <span class="support-eyebrow">QUICK ANSWERS</span>
-          <h2>A few things that may help.</h2>
+          <span class="support-eyebrow">COMMON QUESTIONS</span>
+          <h2 id="faqSectionHeading">Account &amp; sign in</h2>
         </div>
 
-        <div class="faq-accordion">
-          <!-- Item 1 -->
-          <details class="faq-item">
+        <!-- 1. Account FAQs -->
+        <div class="faq-accordion support-faq-group is-active" id="faq-group-account" role="tabpanel"
+          aria-labelledby="tab-account" data-topic-faq="account">
+          <details class="faq-item" open>
             <summary class="faq-question">
-              <span>I forgot my password. What should I do?</span>
+              <span>How do I reset my password?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>
-                From the Yutova sign-in screen, choose “Forgot password?” and follow the instructions sent to your email
-                address.
+                From the Yutova sign-in screen, choose “Forgot password” and enter your registered email address.
+                Follow the instructions sent to your email to securely set a new password.
               </p>
             </div>
           </details>
 
-          <!-- Item 3 -->
           <details class="faq-item">
             <summary class="faq-question">
-              <span>Can I delete my account and data?</span>
+              <span>Can I change the name linked to my account?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>
-                Yes. Yutova gives you control over your information. You can permanently delete your account and
-                associated data from within the app.
+                Yes. Open Yutova, go to Settings &gt; Account, and tap your name to enter a new one.
               </p>
             </div>
           </details>
 
-          <!-- Item 4 -->
           <details class="faq-item">
             <summary class="faq-question">
-              <span>Are my journal entries used to train AI?</span>
+              <span>What should I do if I am not receiving the verification email?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>
-                No. Your journal entries and voice recordings are processed to provide your personal reflections and
-                insights. They are not used to train public or foundational AI models.
+                Please check your Spam, Junk, or Promotions folder. If it hasn't arrived after a few minutes, verify
+                that your email address was spelled correctly and tap “Resend verification”.
               </p>
             </div>
           </details>
 
-          <!-- Item 5 -->
           <details class="faq-item">
             <summary class="faq-question">
-              <span>Where can I read more about privacy?</span>
+              <span>How do I sign in on a new device?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p>
-                You can read the full
-                <a href="../privacy-policy/"
-                  style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">Yutova Privacy
-                  Policy</a>
-                for details about how your information is handled.
+                Download Yutova on your new iOS device and sign in using your existing account credentials (email and
+                password or Apple ID). Your encrypted entries and reflections will sync seamlessly.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- 2. Subscription FAQs -->
+        <div class="faq-accordion support-faq-group" id="faq-group-subscription" role="tabpanel"
+          aria-labelledby="tab-subscription" data-topic-faq="subscription">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>What is the difference between Yutova Free and Yutova Pro?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yutova Free gives you unlimited journaling, thoughtful AI reflections on every entry, and recent
+                history. Yutova Pro unlocks full history, long-term memory threads, deeper pattern recognition across
+                weeks and months, and comprehensive weekly, monthly, and yearly insights.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How do I cancel or manage my subscription?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Subscriptions are managed through Apple. You can cancel or change plans anytime in your iPhone Settings
+                &gt; Apple ID &gt; Subscriptions &gt; Yutova with no cancellation fees.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How do I restore my purchase on a new device?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Ensure you are signed in to the same Apple ID used to purchase the subscription. Inside Yutova, go to
+                Settings &gt; Subscription and tap “Restore Purchases”.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Will I be charged after a free trial?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                If you start a free trial for Yutova Pro, you will only be charged at the end of the trial period. You
+                can cancel anytime at least 24 hours before the trial ends to avoid being charged.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- 3. Journaling & Reflections FAQs -->
+        <div class="faq-accordion support-faq-group" id="faq-group-journal" role="tabpanel"
+          aria-labelledby="tab-journal" data-topic-faq="journal">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How does voice journaling work?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Tap the microphone icon when starting a new entry and speak naturally. Yutova accurately transcribes
+                your speech into written text and generates reflections just like a written entry.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How are reflections generated?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                When you finish writing or speaking, Yutova analyzes your entry to surface thoughtful observations,
+                questions, and themes—without diagnosing, judging, or telling you what to do.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What are Memory Threads and how do they work?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Memory Threads quietly connect recurring themes across multiple entries over weeks and months. When an
+                emotional pattern resurfaces, Yutova highlights the connection so you can observe your growth over time.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I edit or delete previous entries?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Open any past entry in your Journal timeline and tap the options menu to edit your text or delete
+                the entry permanently.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- 4. Privacy FAQs -->
+        <div class="faq-accordion support-faq-group" id="faq-group-privacy" role="tabpanel"
+          aria-labelledby="tab-privacy" data-topic-faq="privacy">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>Are my journal entries used to train AI models?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Your journal entries and voice recordings are processed strictly to create reflections and insights
+                for your personal account. They are never used to train public or foundational AI models.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I delete my account and all associated data?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Yutova gives you complete control over your data. You can permanently delete your account and all
+                associated journal entries, reflections, and insights from within app Settings.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How is my personal information protected?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Your entries are encrypted in transit and at rest. We enforce strict access controls and never sell or
+                monetize your personal data. Read our full <a href="../privacy-policy/"
+                  style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">Privacy
+                  Policy</a> for more details.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I export or download my entries?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. You can export your full journal history anytime in standardized format directly from Settings &gt;
+                Export as PDF.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- 5. Technical Issues FAQs -->
+        <div class="faq-accordion support-faq-group" id="faq-group-issues" role="tabpanel" aria-labelledby="tab-issues"
+          data-topic-faq="issues">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>The app is crashing or freezing. What should I do?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                First, verify you are running the latest version from the App Store. Force close the app and reopen it.
+                If the problem persists, restart your device or reinstall Yutova.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>My microphone isn't working for voice journaling.</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Check that Yutova has microphone permissions enabled in your iPhone Settings &gt; Privacy &amp; Security
+                &gt; Microphone &gt; Yutova.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>My entries are not syncing across devices.</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Make sure you have an active internet connection and that you are logged in to the exact same Yutova
+                account on both devices.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How do I submit a bug report?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Send an email to <a href="mailto:help@yutova.com?subject=Yutova Bug Report"
+                  style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">help@yutova.com</a>
+                including your device model, iOS version, and a brief description of the issue.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- 6. Other / Something Else FAQs -->
+        <div class="faq-accordion support-faq-group" id="faq-group-help" role="tabpanel" aria-labelledby="tab-help"
+          data-topic-faq="help">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>Is Yutova therapy or medical care?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Yutova is a personal self-reflection and journaling companion. It is not a therapist, medical
+                provider, or crisis counseling service.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Is Yutova coming to Android?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes! An Android version is in active development.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How can I suggest a feature or give feedback?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                We love hearing from our community. Send your ideas directly to <a
+                  href="mailto:help@yutova.com?subject=Feature Feedback"
+                  style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">help@yutova.com</a>
+                or DM us on Instagram <a href="https://instagram.com/she_thinksloud" target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">@she_thinksloud</a>.
               </p>
             </div>
           </details>
@@ -331,6 +629,54 @@
         menu.setAttribute("aria-label", "Open menu");
       })
     );
+
+    // Support Topic & Connected FAQ Selection
+    const topicCards = document.querySelectorAll(".support-topic");
+    const faqGroups = document.querySelectorAll(".support-faq-group");
+    const faqHeading = document.getElementById("faqSectionHeading");
+    const faqSection = document.getElementById("supportFaqSection");
+
+    const topicTitles = {
+      account: "Account & sign in",
+      subscription: "Subscription & billing",
+      journal: "Journaling & reflections",
+      privacy: "Privacy & your data",
+      issues: "Something isn't working",
+      help: "Something else"
+    };
+
+    function selectTopic(topicKey, shouldScroll = false) {
+      topicCards.forEach((card) => {
+        const isMatch = card.dataset.topic === topicKey;
+        card.classList.toggle("is-active", isMatch);
+        card.setAttribute("aria-selected", String(isMatch));
+      });
+
+      if (faqHeading && topicTitles[topicKey]) {
+        faqHeading.textContent = topicTitles[topicKey];
+      }
+
+      faqGroups.forEach((group) => {
+        const isMatch = group.dataset.topicFaq === topicKey;
+        group.classList.toggle("is-active", isMatch);
+      });
+
+      if (shouldScroll && faqSection) {
+        faqSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    topicCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        selectTopic(card.dataset.topic, true);
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          selectTopic(card.dataset.topic, true);
+        }
+      });
+    });
 
     // Coming Soon Modal
     const comingSoonModal = document.getElementById("comingSoonModal");

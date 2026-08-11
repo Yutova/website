@@ -94,15 +94,50 @@ body.support-page {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
+  padding: 32px 28px 24px;
   box-shadow: 0 4px 20px rgba(44, 41, 34, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  position: relative;
 }
 
 .support-topic:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
   box-shadow: 0 8px 30px rgba(44, 41, 34, 0.08);
+}
+
+.support-topic.is-active {
+  border-color: var(--accent);
+  background: var(--white);
+  box-shadow: 0 8px 30px rgba(56, 97, 63, 0.14);
+  transform: translateY(-2px);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.support-topic-active-pill {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: #e8eee4;
+  color: var(--accent);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.support-topic.is-active .support-topic-active-pill {
+  display: inline-block;
 }
 
 .support-topic-icon {
@@ -154,10 +189,27 @@ body.support-page {
   line-height: 1.55;
 }
 
+.support-topic-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.support-topic:hover .support-topic-action,
+.support-topic.is-active .support-topic-action {
+  transform: translateX(3px);
+}
+
 /* FAQ */
 .support-faq-section {
   padding: 70px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 90px;
 }
 
 .support-faq-section .support-section-heading {
@@ -168,6 +220,29 @@ body.support-page {
 .support-faq-section .faq-accordion {
   margin: 0 auto;
   max-width: 780px;
+}
+
+.support-faq-group {
+  display: none;
+}
+
+.support-faq-group.is-active {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: faqFadeIn 0.3s ease;
+}
+
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Contact */
