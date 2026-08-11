@@ -107,8 +107,8 @@ body.support-page {
 
 .support-topic-icon {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   background-color: var(--accent);
   mask: var(--support-icon) center / contain no-repeat;
   -webkit-mask: var(--support-icon) center / contain no-repeat;
@@ -116,11 +116,11 @@ body.support-page {
 }
 
 .support-topic-icon-account {
-  --support-icon: url("../assets/icons/account.svg");
+  --support-icon: url("../assets/icons/account.png");
 }
 
 .support-topic-icon-subscription {
-  --support-icon: url("../assets/icons/subscription.svg");
+  --support-icon: url("../assets/icons/subscription.png");
 }
 
 .support-topic-icon-journal {
@@ -128,11 +128,11 @@ body.support-page {
 }
 
 .support-topic-icon-privacy {
-  --support-icon: url("../assets/icons/privacy.svg");
+  --support-icon: url("../assets/icons/privacy.png");
 }
 
 .support-topic-icon-issues {
-  --support-icon: url("../assets/icons/issues.svg");
+  --support-icon: url("../assets/icons/issues.png");
 }
 
 .support-topic-icon-help {
