@@ -7,10 +7,7 @@
   <meta name="description"
     content="A private AI-powered journal that helps you reflect on your thoughts, notice patterns, and build greater clarity over time." />
   <title>Yutova — AI Journal for Reflection, Clarity & Personal Growth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yutova.com/">
@@ -33,7 +30,7 @@
   <!-- Header / Navigation -->
   <nav class="nav" id="mainNav">
     <a class="brand" href="#top" aria-label="Yutova home">
-      <img class="brand-logo" src="assets/logo.svg" alt="" />
+      <img class="brand-logo" src="assets/logo.svg" alt="" width="38" height="38" />
       <span class="brand-name">Yutova</span>
     </a>
     <div class="nav-links" id="navLinks">
@@ -73,7 +70,7 @@
         <div class="phone-stage reveal">
           <div class="orb"></div>
           <div class="phone">
-            <img src="assets/home.png" alt="Yutova home screen" />
+            <img src="assets/home.webp" alt="Yutova home screen" width="758" height="1510" fetchpriority="high" />
           </div>
           <div class="float-note">
             <strong>A space that listens.</strong>Write, speak, pause, and begin wherever you are.
@@ -272,18 +269,18 @@
           </p>
         </div>
         <div class="tabs" role="tablist" aria-label="Inside Yutova areas">
-          <button class="tab active" role="tab" aria-selected="true" data-screen="home.png"
+          <button class="tab active" role="tab" aria-selected="true" data-screen="home.webp"
             data-desc="Your current reflection, recent activity, and a simple place to begin.">Home</button>
-          <button class="tab" role="tab" aria-selected="false" data-screen="journal.png"
+          <button class="tab" role="tab" aria-selected="false" data-screen="journal.webp"
             data-desc="Write or speak freely and revisit previous entries and reflections.">Journal</button>
-          <button class="tab" role="tab" aria-selected="false" data-screen="insights.png"
+          <button class="tab" role="tab" aria-selected="false" data-screen="insights.webp"
             data-desc="See recurring themes, patterns, summaries, and changes over time.">Insights</button>
-          <button class="tab" role="tab" aria-selected="false" data-screen="library-books.png"
+          <button class="tab" role="tab" aria-selected="false" data-screen="library-books.webp"
             data-desc="Explore books, podcasts, exercises, and short reads relevant to reflection and growth.">Library</button>
         </div>
         <div class="showcase-stage reveal">
           <div class="showcase-phone">
-            <img id="showcaseImage" src="assets/home.png" alt="Yutova app screen" />
+            <img id="showcaseImage" src="assets/home.webp" alt="Yutova app screen" width="758" height="1510" />
           </div>
         </div>
         <div class="showcase-cta reveal">
@@ -384,7 +381,7 @@
               <h3>Books for the moment you are in.</h3>
               <p>Find relevant reading without endless searching.</p>
               <div class="phone">
-                <img src="assets/library-books.png" alt="Yutova books library" />
+                <img src="assets/library-books.webp" alt="Yutova books library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card">
@@ -393,7 +390,7 @@
                 Listen to thoughtful voices that support reflection and growth.
               </p>
               <div class="phone">
-                <img src="assets/library-podcasts.png" alt="Yutova podcasts library" />
+                <img src="assets/library-podcasts.webp" alt="Yutova podcasts library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card">
@@ -402,7 +399,7 @@
                 Simple, guided practices for when your mind needs a pause.
               </p>
               <div class="phone">
-                <img src="assets/library-exercises.png" alt="Yutova exercises library" />
+                <img src="assets/library-exercises.webp" alt="Yutova exercises library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
 
@@ -411,7 +408,7 @@
               <h3>Books for the moment you are in.</h3>
               <p>Find relevant reading without endless searching.</p>
               <div class="phone">
-                <img src="assets/library-books.png" alt="Yutova books library" />
+                <img src="assets/library-books.webp" alt="Yutova books library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card" aria-hidden="true">
@@ -420,7 +417,7 @@
                 Listen to thoughtful voices that support reflection and growth.
               </p>
               <div class="phone">
-                <img src="assets/library-podcasts.png" alt="Yutova podcasts library" />
+                <img src="assets/library-podcasts.webp" alt="Yutova podcasts library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card" aria-hidden="true">
@@ -429,7 +426,7 @@
                 Simple, guided practices for when your mind needs a pause.
               </p>
               <div class="phone">
-                <img src="assets/library-exercises.png" alt="Yutova exercises library" />
+                <img src="assets/library-exercises.webp" alt="Yutova exercises library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
 
@@ -438,7 +435,7 @@
               <h3>Books for the moment you are in.</h3>
               <p>Find relevant reading without endless searching.</p>
               <div class="phone">
-                <img src="assets/library-books.png" alt="Yutova books library" />
+                <img src="assets/library-books.webp" alt="Yutova books library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card" aria-hidden="true">
@@ -447,7 +444,7 @@
                 Listen to thoughtful voices that support reflection and growth.
               </p>
               <div class="phone">
-                <img src="assets/library-podcasts.png" alt="Yutova podcasts library" />
+                <img src="assets/library-podcasts.webp" alt="Yutova podcasts library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
             <article class="library-card" aria-hidden="true">
@@ -456,7 +453,7 @@
                 Simple, guided practices for when your mind needs a pause.
               </p>
               <div class="phone">
-                <img src="assets/library-exercises.png" alt="Yutova exercises library" />
+                <img src="assets/library-exercises.webp" alt="Yutova exercises library" width="758" height="1510" loading="lazy" />
               </div>
             </article>
           </div>
@@ -748,7 +745,7 @@
     <div class="wrap footer-grid">
       <div class="footer-brand-col">
         <a class="brand" href="#top" aria-label="Yutova home">
-          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <img class="brand-logo" src="assets/logo.svg" alt="" width="38" height="38" />
           <span class="brand-name">Yutova</span>
         </a>
         <p class="footer-copy">© 2026 Yutova. All rights reserved.</p>
