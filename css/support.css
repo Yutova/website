@@ -116,11 +116,11 @@ body.support-page {
 }
 
 .support-topic-icon-account {
-  --support-icon: url("../assets/icons/account.png");
+  --support-icon: url("../assets/icons/account.svg");
 }
 
 .support-topic-icon-subscription {
-  --support-icon: url("../assets/icons/subscription.png");
+  --support-icon: url("../assets/icons/subscription.svg");
 }
 
 .support-topic-icon-journal {
@@ -128,11 +128,11 @@ body.support-page {
 }
 
 .support-topic-icon-privacy {
-  --support-icon: url("../assets/icons/privacy.png");
+  --support-icon: url("../assets/icons/privacy.svg");
 }
 
 .support-topic-icon-issues {
-  --support-icon: url("../assets/icons/issues.png");
+  --support-icon: url("../assets/icons/issues.svg");
 }
 
 .support-topic-icon-help {
