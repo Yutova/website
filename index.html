@@ -69,7 +69,7 @@
     <!-- 1. Hero Section -->
     <section class="hero" data-ga-section="hero">
       <div class="wrap hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <div class="eyebrow">A MORE THOUGHTFUL DAILY PRACTICE</div>
           <h1>Talk honestly.<br />Understand<br />yourself.</h1>
           <p>
@@ -84,7 +84,7 @@
             Private by design — reflections are generated on your entry, never used to train models.
           </div>
         </div>
-        <div class="phone-stage reveal">
+        <div class="phone-stage">
           <div class="orb"></div>
           <div class="phone">
             <img src="assets/home.webp" srcset="assets/home-sm.webp 380w, assets/home.webp 758w" sizes="(max-width: 768px) 325px, 380px" alt="Yutova home screen" width="758" height="1510" fetchpriority="high" />
@@ -861,7 +861,7 @@
     );
     if (showcaseImage) showcaseImage.style.transition = ".25s ease";
 
-    // Reflection Demo Simulation
+    // Reflection Demo Simulation (Intersection-based)
     const reflections = [
       {
         entry: "Keep putting off the call with my sister. Don't even know why.",
@@ -882,40 +882,77 @@
     const typedText = document.getElementById("typedText");
     const reflectionBox = document.getElementById("reflectionBox");
     const reflectionText = document.getElementById("reflectionText");
+    const reflectionDemoSection = document.getElementById("reflection-demo");
     let reflectionIndex = 0;
+    let typingInterval = null;
+    let nextTimeout = null;
+    let isTypingActive = false;
 
     function typeReflection() {
-      if (!typedText || !reflectionBox || !reflectionText) return;
+      if (!typedText || !reflectionBox || !reflectionText || !isTypingActive) return;
       const current = reflections[reflectionIndex % reflections.length];
       let characterIndex = 0;
       typedText.textContent = "";
       reflectionBox.classList.remove("show");
 
-      const typing = setInterval(() => {
+      clearInterval(typingInterval);
+      typingInterval = setInterval(() => {
+        if (!isTypingActive) {
+          clearInterval(typingInterval);
+          return;
+        }
         typedText.textContent += current.entry[characterIndex];
         characterIndex += 1;
         if (characterIndex >= current.entry.length) {
-          clearInterval(typing);
-          setTimeout(() => {
+          clearInterval(typingInterval);
+          nextTimeout = setTimeout(() => {
+            if (!isTypingActive) return;
             reflectionText.textContent = current.reflection;
             reflectionBox.classList.add("show");
-            setTimeout(() => {
+            nextTimeout = setTimeout(() => {
+              if (!isTypingActive) return;
               reflectionIndex += 1;
               typeReflection();
             }, 5200);
           }, 550);
         }
-      }, 28);
+      }, 30);
     }
-    typeReflection();
 
-    // Scroll Reveal Observer
+    if (reflectionDemoSection) {
+      const demoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (!isTypingActive) {
+                isTypingActive = true;
+                typeReflection();
+              }
+            } else {
+              isTypingActive = false;
+              clearInterval(typingInterval);
+              clearTimeout(nextTimeout);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      demoObserver.observe(reflectionDemoSection);
+    }
+
+    // Scroll Reveal Observer (Optimized)
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        }),
-      { threshold: 0.12 }
+      (entries, obs) => {
+        requestAnimationFrame(() => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        });
+      },
+      { threshold: 0.1 }
     );
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
