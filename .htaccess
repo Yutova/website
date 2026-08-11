@@ -1,16 +1,14 @@
 <IfModule mod_rewrite.c>
-RewriteEngine On
+    RewriteEngine On
 
-# Force the directory/domain root to load index.html
-DirectoryIndex index.html index.php
+    # Always prefer the Yutova static website
+    DirectoryIndex index.html
 
-# Allow real files and directories
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+    # Allow real static files/directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
 
-# Fallback for WordPress if present
-<IfFile index.php>
-RewriteRule . index.php [L]
-</IfFile>
+    # All other frontend routes go to the Yutova website
+    RewriteRule ^ index.html [L]
 </IfModule>

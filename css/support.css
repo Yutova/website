@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Support Page Styles (Unified Design System)
+   ========================================================================== */
+
+body.support-page {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.support-main {
+  padding: 130px 0 60px;
+}
+
+.support-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+.support-eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Hero */
+.support-hero {
+  text-align: center;
+  padding: 40px 0 70px;
+  border-bottom: 1px solid var(--line);
+}
+
+.support-hero h1 {
+  font-family: var(--font-family);
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.support-hero p {
+  max-width: 630px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Help topics */
+.support-topics {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.support-section-heading {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.support-section-heading h2 {
+  font-family: var(--font-family);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 8px 0 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.support-section-heading p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 16px;
+}
+
+.support-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.support-topic {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(44, 41, 34, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.support-topic:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(44, 41, 34, 0.08);
+}
+
+.support-topic-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-color: var(--accent);
+  mask: var(--support-icon) center / contain no-repeat;
+  -webkit-mask: var(--support-icon) center / contain no-repeat;
+  margin-bottom: 22px;
+}
+
+.support-topic-icon-account {
+  --support-icon: url("../assets/icons/account.svg");
+}
+
+.support-topic-icon-subscription {
+  --support-icon: url("../assets/icons/subscription.svg");
+}
+
+.support-topic-icon-journal {
+  --support-icon: url("../assets/icons/journal.svg");
+}
+
+.support-topic-icon-privacy {
+  --support-icon: url("../assets/icons/privacy.svg");
+}
+
+.support-topic-icon-issues {
+  --support-icon: url("../assets/icons/issues.svg");
+}
+
+.support-topic-icon-help {
+  --support-icon: url("../assets/icons/help.svg");
+}
+
+.support-topic h3 {
+  font-family: var(--font-family);
+  font-size: 19px;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.support-topic p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* FAQ */
+.support-faq-section {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.support-faq-section .support-section-heading {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.support-faq-section .faq-accordion {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+/* Contact */
+.support-contact {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.support-contact-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.support-contact h2 {
+  font-family: var(--font-family);
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  margin: 8px 0 16px;
+  color: var(--ink);
+}
+
+.support-contact p {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0 auto 28px;
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+.support-contact .response-note {
+  margin-top: 18px !important;
+  font-size: 13.5px !important;
+  color: var(--muted);
+}
+
+/* Contact Cards Grid */
+.support-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 32px 0 20px;
+  text-align: left;
+}
+
+.support-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(44, 41, 34, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.support-contact-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(44, 41, 34, 0.08);
+}
+
+.support-contact-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--color-surface-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.support-contact-label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.support-contact-value {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.support-contact-card:hover .support-contact-value {
+  color: var(--accent);
+}
+
+/* Safety */
+.support-safety {
+  max-width: 860px;
+  margin: 0 auto 40px;
+  padding: 28px 32px;
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(106, 143, 112, 0.18);
+}
+
+.support-safety strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15.5px;
+  color: var(--ink);
+}
+
+.support-safety p {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .support-main {
+    padding: 110px 0 40px;
+  }
+
+  .support-hero {
+    padding: 20px 0 50px;
+  }
+
+  .support-topics,
+  .support-faq-section,
+  .support-contact {
+    padding: 48px 0;
+  }
+
+  .support-topic-grid,
+  .support-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .support-safety {
+    padding: 22px 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .support-container {
+    width: min(100% - 50px, 1180px);
+  }
+}

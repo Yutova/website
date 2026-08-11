@@ -105,19 +105,21 @@ button {
   min-height: 48px;
   padding: 0 24px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--ink);
-  background: var(--ink);
+  border: 1px solid var(--accent);
+  background: var(--accent);
   color: white;
   font-weight: 600;
   font-size: 14.5px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
   cursor: pointer;
   text-align: center;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(32, 32, 31, 0.15);
+  background: #5b7d60;
+  border-color: #5b7d60;
+  box-shadow: 0 10px 25px rgba(106, 143, 112, 0.3);
 }
 
 .btn.btn-accent {
@@ -130,6 +132,18 @@ button {
   background: #5b7d60;
   border-color: #5b7d60;
   box-shadow: 0 10px 25px rgba(106, 143, 112, 0.3);
+}
+
+.btn.btn-dark {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}
+
+.btn.btn-dark:hover {
+  background: #2e2e2d;
+  border-color: #2e2e2d;
+  box-shadow: 0 10px 25px rgba(32, 32, 31, 0.15);
 }
 
 .btn.light {
@@ -368,10 +382,10 @@ section {
 }
 
 .why-thread-step {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 18px;
+  gap: 9px;
+  padding: 11px 18px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
@@ -379,6 +393,7 @@ section {
   color: #4a4945;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(44, 41, 34, 0.03);
+  max-width: 100%;
 }
 
 .why-dot {
@@ -386,6 +401,12 @@ section {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
+  flex-shrink: 0;
+}
+
+.why-entry-label {
+  text-align: left;
+  line-height: 1.35;
 }
 
 .why-thread-connector {
@@ -627,6 +648,11 @@ section {
   background-repeat: no-repeat;
   color: #fffdfa;
   border-top: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 600px;
+  max-height: 880px;
+  padding: 80px 0;
 }
 
 .bg-section::before {
@@ -676,29 +702,25 @@ section {
 
 /* BG #0: When Something Is On Your Mind */
 .bg-section-0 {
-  min-height: 72vh;
-  background-image: url("../assets/bg0.png");
+  background-image: url("../assets/bg0.webp");
   background-position: center 40%;
 }
 
 /* BG #1: Emotional Pause */
 .bg-section-1 {
-  min-height: 75vh;
-  background-image: url("../assets/bg1.png");
+  background-image: url("../assets/bg1.webp");
   background-position: center 35%;
 }
 
 /* BG #2: Lifestyle / Habit */
 .bg-section-2 {
-  min-height: 65vh;
-  background-image: url("../assets/bg2.png");
+  background-image: url("../assets/bg2.webp");
   background-position: center 45%;
 }
 
 /* BG #3: Space to Notice */
 .bg-section-3 {
-  min-height: 58vh;
-  background-image: url("../assets/bg3.png");
+  background-image: url("../assets/bg3.webp");
   background-position: center 50%;
 }
 
@@ -711,8 +733,7 @@ section {
 
 /* BG #4: Final Conversion CTA */
 .bg-section-4 {
-  min-height: 82vh;
-  background-image: url("../assets/bg4.png");
+  background-image: url("../assets/bg4.webp");
   background-position: center 40%;
 }
 
@@ -1669,7 +1690,16 @@ footer {
 
   .why-thread-visual {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    width: 100%;
+  }
+
+  .why-thread-step {
+    padding: 9px 15px;
+    font-size: 13px;
+    border-radius: 24px;
+    max-width: 100%;
   }
 
   .why-thread-connector {
@@ -1735,8 +1765,28 @@ footer {
   }
 
   .bg-section {
-    min-height: 52vh;
+    min-height: clamp(440px, 56vh, 540px);
     padding: 70px 0;
+  }
+
+  .bg-section-0 {
+    background-image: url("../assets/bg0-mobile.webp");
+  }
+
+  .bg-section-1 {
+    background-image: url("../assets/bg1-mobile.webp");
+  }
+
+  .bg-section-2 {
+    background-image: url("../assets/bg2-mobile.webp");
+  }
+
+  .bg-section-3 {
+    background-image: url("../assets/bg3-mobile.webp");
+  }
+
+  .bg-section-4 {
+    background-image: url("../assets/bg4-mobile.webp");
   }
 
   .bg-section h2 {

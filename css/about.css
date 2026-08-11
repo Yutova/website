@@ -173,8 +173,7 @@ body.about-page {
 
 /* Section 5: Bottom CTA */
 .about-cta-section {
-  padding: 64px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 64px 0 20px;
 }
 
 .about-cta-title {
@@ -185,86 +184,6 @@ body.about-page {
   line-height: 1.3;
   color: var(--ink);
   margin: 0 0 24px;
-}
-
-/* Section 6: Contact Section */
-.about-contact-section {
-  padding: 64px 0 20px;
-}
-
-.about-contact-title {
-  font-family: var(--font-family);
-  font-size: clamp(24px, 3.2vw, 32px);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  color: var(--ink);
-  margin: 0 0 12px;
-}
-
-.about-contact-lead {
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 620px;
-  margin: 0 0 28px;
-}
-
-.about-contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.about-contact-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 22px 24px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  color: var(--ink);
-  text-decoration: none;
-  box-shadow: 0 4px 20px rgba(44, 41, 34, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.about-contact-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 8px 30px rgba(44, 41, 34, 0.08);
-}
-
-.about-contact-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: var(--radius-md);
-  background: var(--color-surface-soft);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.about-contact-label {
-  display: block;
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 500;
-  margin-bottom: 2px;
-}
-
-.about-contact-value {
-  display: block;
-  font-size: 15.5px;
-  font-weight: 600;
-  color: var(--ink);
-  transition: color 0.2s ease;
-}
-
-.about-contact-card:hover .about-contact-value {
-  color: var(--accent);
 }
 
 /* Responsive */
@@ -279,12 +198,11 @@ body.about-page {
 
   .about-quote-section,
   .about-mission-section,
-  .about-values-section,
-  .about-cta-section {
+  .about-values-section {
     padding: 44px 0;
   }
 
-  .about-contact-section {
+  .about-cta-section {
     padding: 44px 0 10px;
   }
 
@@ -297,11 +215,6 @@ body.about-page {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 20px 0;
-  }
-
-  .about-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
   }
 }
 
