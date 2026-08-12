@@ -1,0 +1,10 @@
+{
+  "name": "yutova-website",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Yutova official website",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "version:set": "node scripts/set-version.js"
+  }
+}
