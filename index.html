@@ -1432,6 +1432,31 @@
       margin-top: auto;
     }
 
+    .pricing-action {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-action .btn {
+      width: 100%;
+    }
+
+    .pricing-trial-note {
+      margin: 8px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+      min-height: 17px;
+    }
+
+    .pricing-card-featured .pricing-trial-note {
+      color: #3b5a3f;
+      font-weight: 500;
+    }
+
     .pricing-card-featured .btn {
       background: var(--accent);
       border-color: var(--accent);
@@ -1958,7 +1983,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn app-download-btn" href="#download">Get Yutova</a>
+    <a class="btn app-download-btn" href="#download">Download on App Store</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">
       <span class="menu-line"></span>
       <span class="menu-line"></span>
@@ -1978,7 +2003,7 @@
             and move forward with more clarity.
           </p>
           <div class="hero-actions">
-            <a class="btn app-download-btn" href="#download">Download for iOS</a>
+            <a class="btn app-download-btn" href="#download">Download on the App Store</a>
             <a class="btn light" href="#how">See how it works</a>
           </div>
           <div class="hero-note">
@@ -2109,7 +2134,7 @@
           train Yutova's models.
         </p>
         <div class="demo-cta-wrap reveal">
-          <a class="btn app-download-btn" href="#download">Try Yutova</a>
+          <a class="btn app-download-btn" href="#download">Download on the App Store</a>
         </div>
       </div>
     </section>
@@ -2221,7 +2246,7 @@
             A few honest minutes today can become a clearer picture of yourself over time.
           </p>
           <div class="bg-action">
-            <a class="btn btn-accent app-download-btn" href="#download">Start your first entry</a>
+            <a class="btn btn-accent app-download-btn" href="#download">Download on the App Store</a>
           </div>
         </div>
       </div>
@@ -2471,7 +2496,10 @@
               <li>Weekly reports</li>
               <li>Curated library access</li>
             </ul>
-            <a class="btn light app-download-btn" href="#download">Start free</a>
+            <div class="pricing-action">
+              <a class="btn light app-download-btn" href="#download">Get on App Store</a>
+              <p class="pricing-trial-note">Free forever • No credit card needed</p>
+            </div>
           </article>
           <article class="pricing-card reveal">
             <h3>Yutova Pro Monthly</h3>
@@ -2493,7 +2521,10 @@
               <li>Export data (PDF)</li>
               <li>Entries/reflections deletion</li>
             </ul>
-            <a class="btn btn-dark app-download-btn" href="#download">Try Yutova Pro Monthly</a>
+            <div class="pricing-action">
+              <a class="btn btn-dark app-download-btn" href="#download">Start 7-Day Free Trial</a>
+              <p class="pricing-trial-note">7-day free trial, then $9.99/mo • Cancel anytime</p>
+            </div>
           </article>
           <article class="pricing-card pricing-card-featured reveal">
             <div class="pricing-save-pill">SAVE 42%</div>
@@ -2516,7 +2547,10 @@
               <li>Export data (PDF)</li>
               <li>Entries/reflections deletion</li>
             </ul>
-            <a class="btn app-download-btn" href="#download">Try Yutova Pro Yearly</a>
+            <div class="pricing-action">
+              <a class="btn app-download-btn" href="#download">Start 7-Day Free Trial</a>
+              <p class="pricing-trial-note">7-day free trial, then $69.99/yr • Cancel anytime</p>
+            </div>
           </article>
         </div>
       </div>
@@ -2670,7 +2704,7 @@
             Just begin with what's on your mind.
           </p>
           <div class="final-cta-actions">
-            <a class="btn btn-accent app-download-btn" href="#">Get Yutova</a>
+            <a class="btn btn-accent app-download-btn" href="#download">Download on the App Store</a>
             <span class="final-cta-subline">Free to start · No credit card required</span>
           </div>
           <div class="final-platform-badges">
