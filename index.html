@@ -1337,13 +1337,13 @@
       background: var(--white);
       display: flex;
       flex-direction: column;
-      justify-content: space-between
+      justify-content: flex-start;
     }
 
     .pricing-card-featured {
       background: #e8eee4;
       border-color: var(--accent);
-      box-shadow: 0 12px 30px -14px rgba(76, 90, 71, 0.28)
+      box-shadow: 0 12px 30px -14px rgba(76, 90, 71, 0.28);
     }
 
     .pricing-save-pill {
@@ -1360,63 +1360,76 @@
       text-transform: uppercase;
       white-space: nowrap;
       box-shadow: 0 4px 14px rgba(20, 114, 92, 0.28);
-      z-index: 2
+      z-index: 2;
     }
 
     .pricing-card h3 {
       font-size: 20px;
-      margin: 0
+      line-height: 1.3;
+      margin: 0;
+      min-height: 26px;
     }
 
     .pricing-amount {
       margin: 12px 0 2px;
       font-family: var(--font-family);
       font-size: 38px;
-      line-height: 1
+      line-height: 1;
     }
 
     .pricing-subprice {
       font-size: 13px;
       color: var(--muted);
-      margin-top: 4px
+      margin-top: 4px;
+      min-height: 18px;
+      line-height: 1.4;
     }
 
     .pricing-period {
       margin-left: 4px;
       color: var(--muted);
       font-family: var(--font-family);
-      font-size: 14px
+      font-size: 14px;
     }
 
     .pricing-description {
-      min-height: 44px;
-      margin: 0 0 22px;
+      min-height: 42px;
+      margin: 12px 0 22px;
       color: var(--muted);
-      font-size: 14px
+      font-size: 14px;
+      line-height: 1.5;
     }
 
     .pricing-card ul {
-      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       margin: 0 0 24px;
       padding: 0;
-      list-style: none
+      list-style: none;
+      flex-grow: 1;
     }
 
     .pricing-card li {
       display: flex;
+      align-items: flex-start;
       gap: 8px;
       padding: 8px 0;
       border-top: 1px solid var(--line);
-      font-size: 14px
+      font-size: 14px;
+      line-height: 1.45;
     }
 
     .pricing-card li::before {
       color: var(--muted);
-      content: "—"
+      content: "—";
+      flex-shrink: 0;
+      line-height: 1.45;
     }
 
     .pricing-card .btn {
-      width: 100%
+      width: 100%;
+      margin-top: auto;
     }
 
     .pricing-card-featured .btn {
@@ -2455,7 +2468,7 @@
             <ul>
               <li>Unlimited journaling, write or speak</li>
               <li>Gentle reflections on every entry</li>
-              <li>7-day journal history</li>
+              <li>Weekly reports</li>
               <li>Curated library access</li>
             </ul>
             <a class="btn light app-download-btn" href="#download">Start free</a>
@@ -2470,10 +2483,15 @@
               For the flexible month-to-month conversation with yourself.
             </p>
             <ul>
-              <li>Full journal history &amp; memory threads</li>
-              <li>Deeper, pattern-aware reflections</li>
+              <li>Weekly, monthly &amp; yearly reports</li>
+              <li>Better AI reflection depth</li>
+              <li>Priority AI models</li>
+              <li>Unlimited history</li>
               <li>Unlimited voice journaling</li>
-              <li>Private, exportable at any time</li>
+              <li>Unlimited library recommendations</li>
+              <li>Face ID protection</li>
+              <li>Export data (PDF)</li>
+              <li>Entries/reflections deletion</li>
             </ul>
             <a class="btn btn-dark app-download-btn" href="#download">Try Yutova Pro Monthly</a>
           </article>
@@ -2485,13 +2503,18 @@
             </div>
             <div class="pricing-subprice">$69.99 billed yearly</div>
             <p class="pricing-description">
-              For the longer conversation with yourself. Billed yearly.
+              For the longer conversation with yourself.
             </p>
             <ul>
-              <li>Full journal history &amp; memory threads</li>
-              <li>Deeper, pattern-aware reflections</li>
+              <li>Weekly, monthly &amp; yearly reports</li>
+              <li>Better AI reflection depth</li>
+              <li>Priority AI models</li>
+              <li>Unlimited history</li>
               <li>Unlimited voice journaling</li>
-              <li>Private, exportable at any time</li>
+              <li>Unlimited library recommendations</li>
+              <li>Face ID protection</li>
+              <li>Export data (PDF)</li>
+              <li>Entries/reflections deletion</li>
             </ul>
             <a class="btn app-download-btn" href="#download">Try Yutova Pro Yearly</a>
           </article>
