@@ -11,7 +11,7 @@ const zipFile = path.join(rootDir, 'yutova-build.zip');
 console.log('🚀 Starting production build for yutova.com...\n');
 
 // 1. Run version synchronization
-console.log('📦 Step 1: Synchronizing global asset version...');
+console.log('📦 Step 1: Synchronizing asset content hash versions...');
 execSync('node scripts/set-version.js', { stdio: 'inherit', cwd: rootDir });
 
 // 2. Clean/recreate dist folder

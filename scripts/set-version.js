@@ -2,36 +2,31 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const rootDir = path.resolve(__dirname, '..');
-const versionFilePath = path.join(rootDir, 'VERSION');
 
-// Get version from command line argument or read from VERSION file
-let targetVersion = process.argv[2];
+console.log('🔍 Computing asset content hashes (cache-busting by file content)...');
 
-if (!targetVersion) {
-  if (fs.existsSync(versionFilePath)) {
-    targetVersion = fs.readFileSync(versionFilePath, 'utf8').trim();
-  } else {
-    targetVersion = '1.0.0';
+// Cache computed file hashes to avoid re-reading disk for identical assets
+const fileHashMap = new Map();
+
+function getFileHash(filePath) {
+  if (fileHashMap.has(filePath)) {
+    return fileHashMap.get(filePath);
   }
-} else {
-  // Update the VERSION file if a new version was passed
-  fs.writeFileSync(versionFilePath, targetVersion.trim() + '\n', 'utf8');
-
-  // Also sync package.json if it exists
-  const pkgPath = path.join(rootDir, 'package.json');
-  if (fs.existsSync(pkgPath)) {
-    try {
-      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-      pkg.version = targetVersion.trim();
-      fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n', 'utf8');
-    } catch (e) {}
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  try {
+    const fileBuffer = fs.readFileSync(filePath);
+    const hash = crypto.createHash('md5').update(fileBuffer).digest('hex').slice(0, 8);
+    fileHashMap.set(filePath, hash);
+    return hash;
+  } catch (err) {
+    return null;
   }
 }
-
-targetVersion = targetVersion.trim();
-console.log(`Setting global asset version to: v=${targetVersion}`);
 
 function findHtmlFiles(dir, fileList = []) {
   const items = fs.readdirSync(dir);
@@ -49,25 +44,51 @@ function findHtmlFiles(dir, fileList = []) {
 }
 
 const htmlFiles = findHtmlFiles(rootDir);
-let updatedCount = 0;
+let updatedFilesCount = 0;
+let totalAssetsVersioned = 0;
 
-for (const file of htmlFiles) {
-  let content = fs.readFileSync(file, 'utf8');
-  const relativePath = path.relative(rootDir, file);
+for (const htmlFile of htmlFiles) {
+  const originalContent = fs.readFileSync(htmlFile, 'utf8');
+  const relativeHtmlPath = path.relative(rootDir, htmlFile);
+  const htmlDir = path.dirname(htmlFile);
+  let fileAssetsCount = 0;
 
-  // Match any asset with ?v=...
-  const updatedContent = content.replace(
-    /(\.(?:css|js|png|svg|ico|webp|woff2|woff)\?v=)[a-zA-Z0-9._-]+/g,
-    `$1${targetVersion}`
+  // Match any asset link with an existing ?v= query parameter
+  const updatedContent = originalContent.replace(
+    /((?:href|src)=["'])([^"'?#]+\.(?:css|js|png|svg|ico|webp|woff2|woff))\?v=[a-zA-Z0-9._-]+(["'])/g,
+    (match, prefix, assetRelativePath, suffix) => {
+      // Resolve asset path relative to the current HTML file
+      let fullAssetPath;
+      if (assetRelativePath.startsWith('/')) {
+        fullAssetPath = path.join(rootDir, assetRelativePath);
+      } else {
+        fullAssetPath = path.resolve(htmlDir, assetRelativePath);
+      }
+
+      const hash = getFileHash(fullAssetPath);
+      if (!hash) {
+        return match; // File not found, keep original match
+      }
+
+      fileAssetsCount++;
+      return `${prefix}${assetRelativePath}?v=${hash}${suffix}`;
+    }
   );
 
-  if (content !== updatedContent) {
-    fs.writeFileSync(file, updatedContent, 'utf8');
-    console.log(`  ✓ Updated assets in: ${relativePath}`);
-    updatedCount++;
+  if (originalContent !== updatedContent) {
+    fs.writeFileSync(htmlFile, updatedContent, 'utf8');
+    console.log(`  ✓ Updated hashes in: ${relativeHtmlPath} (${fileAssetsCount} asset links)`);
+    updatedFilesCount++;
   } else {
-    console.log(`  - No versioned assets changed in: ${relativePath}`);
+    console.log(`  - No hash changes in: ${relativeHtmlPath}`);
   }
+  totalAssetsVersioned += fileAssetsCount;
 }
 
-console.log(`\nSuccessfully updated ${updatedCount} file(s) to version ${targetVersion}.`);
+console.log('\n📊 Asset Content Hashes:');
+for (const [filePath, hash] of fileHashMap.entries()) {
+  const relPath = path.relative(rootDir, filePath);
+  console.log(`  • ${relPath} -> v=${hash}`);
+}
+
+console.log(`\n✅ Completed content hash versioning: ${updatedFilesCount} HTML file(s) updated, ${totalAssetsVersioned} total asset references linked.`);
