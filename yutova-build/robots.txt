@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+
+Sitemap: https://yutova.com/sitemap.xml

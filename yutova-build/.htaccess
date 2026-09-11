@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Always prefer the Yutova static website
+    DirectoryIndex index.html
+
+    # Allow real static files/directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # All other frontend routes go to the Yutova website
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# Cache-Control Headers to prevent stale HTML and allow versioned asset busting
+<IfModule mod_headers.c>
+    # Never cache HTML so updates load instantly
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Cache static assets (CSS, JS, fonts, images, icons)
+    <FilesMatch "\.(css|js|woff2|woff|png|jpg|jpeg|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=604800, must-revalidate"
+    </FilesMatch>
+</IfModule>
