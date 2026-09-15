@@ -3,21 +3,27 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url('../assets/fonts/manrope-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("../assets/fonts/manrope-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url('../assets/fonts/manrope-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../assets/fonts/manrope-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 /* ==========================================================================
@@ -124,14 +130,18 @@ button {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 10px 40px rgba(46, 42, 35, 0.07);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .brand {
   display: flex;
   gap: 10px;
   align-items: center;
-  font: 700 21px/1 "Manrope", sans-serif;
+  font:
+    700 21px/1 "Manrope",
+    sans-serif;
   letter-spacing: -0.03em;
 }
 
@@ -180,7 +190,11 @@ button {
   color: white;
   font-weight: 600;
   font-size: 14.5px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
   cursor: pointer;
   text-align: center;
 }
@@ -257,7 +271,10 @@ button {
   height: 2.2px;
   background-color: var(--ink);
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    background-color 0.25s ease;
   transform-origin: center;
 }
 
@@ -312,7 +329,6 @@ h2 {
 
 section {
   padding: 120px 0;
-  border-top: 1px solid var(--line);
   position: relative;
 }
 
@@ -482,9 +498,11 @@ section {
 .why-thread-connector {
   width: 24px;
   height: 1.5px;
-  background: repeating-linear-gradient(to right,
-      var(--accent) 0 4px,
-      transparent 4px 8px);
+  background: repeating-linear-gradient(
+    to right,
+    var(--accent) 0 4px,
+    transparent 4px 8px
+  );
 }
 
 .why-summary {
@@ -531,7 +549,9 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 220px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .step-card:hover {
@@ -660,7 +680,9 @@ section {
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reflection-demo-response.show {
@@ -728,10 +750,12 @@ section {
 .bg-section::before {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg,
-      rgba(24, 28, 25, 0.82) 0%,
-      rgba(24, 28, 25, 0.58) 55%,
-      rgba(24, 28, 25, 0.22) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(24, 28, 25, 0.82) 0%,
+    rgba(24, 28, 25, 0.58) 55%,
+    rgba(24, 28, 25, 0.22) 100%
+  );
   content: "";
   z-index: 1;
 }
@@ -795,10 +819,12 @@ section {
 }
 
 .bg-section-3::before {
-  background: linear-gradient(90deg,
-      rgba(30, 32, 28, 0.80) 0%,
-      rgba(30, 32, 28, 0.48) 60%,
-      rgba(30, 32, 28, 0.15) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 32, 28, 0.8) 0%,
+    rgba(30, 32, 28, 0.48) 60%,
+    rgba(30, 32, 28, 0.15) 100%
+  );
 }
 
 /* BG #4: Final Conversion CTA */
@@ -893,9 +919,11 @@ section {
   right: 7%;
   left: 7%;
   height: 1px;
-  background: repeating-linear-gradient(to right,
-      var(--line) 0 6px,
-      transparent 6px 12px);
+  background: repeating-linear-gradient(
+    to right,
+    var(--line) 0 6px,
+    transparent 6px 12px
+  );
   content: "";
 }
 
@@ -1085,7 +1113,9 @@ section {
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .feature:hover {
@@ -1156,16 +1186,20 @@ section {
   position: relative;
   border-radius: var(--radius-xl);
   padding: 6px 0 16px;
-  -webkit-mask-image: linear-gradient(to right,
-      transparent 0%,
-      #000 8%,
-      #000 92%,
-      transparent 100%);
-  mask-image: linear-gradient(to right,
-      transparent 0%,
-      #000 8%,
-      #000 92%,
-      transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
 }
 
 .library-blur-edge {
@@ -1179,12 +1213,22 @@ section {
 
 .library-blur-left {
   left: 0;
-  background: linear-gradient(to right, var(--paper-2) 0%, rgba(238, 233, 223, 0.6) 50%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    var(--paper-2) 0%,
+    rgba(238, 233, 223, 0.6) 50%,
+    transparent 100%
+  );
 }
 
 .library-blur-right {
   right: 0;
-  background: linear-gradient(to left, var(--paper-2) 0%, rgba(238, 233, 223, 0.6) 50%, transparent 100%);
+  background: linear-gradient(
+    to left,
+    var(--paper-2) 0%,
+    rgba(238, 233, 223, 0.6) 50%,
+    transparent 100%
+  );
 }
 
 .library-track {
@@ -1574,7 +1618,9 @@ section {
   border-radius: 18px;
   background: var(--paper);
   overflow: hidden;
-  transition: border-color 0.25s ease, background-color 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .faq-item[open] {
@@ -1691,7 +1737,9 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal.visible {
@@ -1729,7 +1777,7 @@ footer {
     display: inline-flex;
   }
 
-  .nav>.btn {
+  .nav > .btn {
     display: none;
   }
 
@@ -1813,9 +1861,11 @@ footer {
   .why-thread-connector {
     width: 1.5px;
     height: 16px;
-    background: repeating-linear-gradient(to bottom,
-        var(--accent) 0 4px,
-        transparent 4px 8px);
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--accent) 0 4px,
+      transparent 4px 8px
+    );
   }
 
   .phone-stage {
@@ -1954,9 +2004,7 @@ footer {
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
-
   *,
   ::before,
   ::after {

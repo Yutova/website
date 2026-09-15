@@ -97,7 +97,9 @@ body.about-page {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(44, 41, 34, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .about-card:hover {
@@ -144,6 +146,9 @@ body.about-page {
 
 .about-value-row:first-child {
   border-top: 1px solid var(--line);
+}
+.about-value-row:last-child {
+  border: none;
 }
 
 .about-value-title {
