@@ -1111,7 +1111,6 @@ section {
   background: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 200px;
   transition:
     transform 0.25s ease,
@@ -1131,6 +1130,7 @@ section {
   mask: var(--feature-icon) center / contain no-repeat;
   -webkit-mask: var(--feature-icon) center / contain no-repeat;
   margin-bottom: 24px;
+  flex-shrink: 0;
 }
 
 .feature-icon-reflections {
@@ -1160,8 +1160,10 @@ section {
 
 .feature h3 {
   font-size: 21px;
+  line-height: 1.3;
   margin: 0 0 8px;
   font-weight: 600;
+  min-height: 55px;
 }
 
 .feature p {
@@ -1982,6 +1984,10 @@ footer {
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature h3 {
+    min-height: auto;
   }
 
   .privacy-card {
