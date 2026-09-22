@@ -1671,10 +1671,6 @@ section {
   margin: 0;
 }
 
-/* ==========================================================================
-   17. Footer
-   ========================================================================== */
-
 footer {
   padding: 60px 0 50px;
   background: var(--paper);
@@ -1695,6 +1691,38 @@ footer {
   margin-top: 16px;
   color: #4a4945;
   font-size: 13.5px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: #4a4945;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.footer-socials svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
 }
 
 .footer-links-group {
